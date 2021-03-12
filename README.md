@@ -1,4 +1,4 @@
-# Verda - a chatbot which the language of ecology
+# Verda - a chatbot which speaks the language of ecology
 
 ![image](https://user-images.githubusercontent.com/36764968/110909706-12eee800-8319-11eb-9ece-c281c4b45409.png)
 

@@ -1,4 +1,3 @@
-from os import path as os_path
 import logging
 from script_reader import PhraseParser
 

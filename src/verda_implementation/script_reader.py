@@ -1,8 +1,11 @@
 class Keyword:
-    def __init__(self, word, weight, decomposition):
+    def __init__(self, word=None, weight=None, decomposition=None):
         self.word = word
         self.weight = weight
         self.decomposition = decomposition
+
+    def __le__(self, other):
+        return self.weight >= other.weight
 
 
 class Decomposition:
