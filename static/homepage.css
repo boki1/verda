@@ -1,13 +1,15 @@
 body {
-    background-image: url("../static/images/verda_background.jpeg");
+    background-image: url('../static/images/tree_background.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
 .header {
+    background-image: url('../static/images/header_background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    background-color: #00d456;
     padding: 150px;
 }
 
@@ -24,7 +26,7 @@ body {
 }
 
 #main {
-    background-color: transparent;
+    /* background-color: #39cc1e; */
     opacity: 0.8;
     border-width: 10px;
 }
@@ -51,6 +53,10 @@ body {
     background-color: white;
     border-width: 3px;
     border-color: black;
+}
+
+#contactsCard h2 {
+    size: 40;
 }
 
 .kristiyanImg {
