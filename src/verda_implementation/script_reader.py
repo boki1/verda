@@ -6,13 +6,13 @@ class Keyword:
 
 
 class Decomposition:
-    def __init__(self, parts, save_enable, reassembly):
+    def __init__(self, parts, save_enabled, reassembly_rules):
         self.parts = parts
-        self.save_enable = save_enable
-        self.reassembly = reassembly
+        self.save_enable = save_enabled
+        self.reassembly = reassembly_rules
 
 
-class Verda:
+class PhraseParser:
     def __init__(self):
         self.initials = []
         self.finals = []
@@ -22,6 +22,17 @@ class Verda:
         self.synonyms = []
         self.keys = {}
         self.memory = []
+
+
+    def __str__(self):
+        return f"Initials:  + {self.initials} + \
+Finals: {self.finals}\
+Quits: {self.quits} \
+Pres: {self.pres}\
+Posts: {self.posts}\
+Synonyms: {self.synonyms}\
+Keys: {self.keys}"
+
 
     def get_from_file(self, path):
         key = None
@@ -66,23 +77,3 @@ class Verda:
                 elif tag == 'reasmb':
                     words = content.split(" ")
                     decomposition.reassembly.append(words)
-
-        print("Initials: ")
-        print(self.initials)
-        print("Finals: ")
-        print(self.finals)
-        print("Quits: ")
-        print(self.quits)
-        print("Pres: ")
-        print(self.pres)
-        print("Posts: ")
-        print(self.posts)
-        print("Synonyms: ")
-        print(self.synonyms)
-        print("Keys: ")
-        print(self.keys)
-
-
-if __name__ == '__main__':
-    verda = Verda()
-    verda.get_from_file("../../misc/eco.phrases")
