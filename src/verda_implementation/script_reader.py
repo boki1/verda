@@ -26,7 +26,6 @@ class PhraseParser:
         self.keys = {}
         self.memory = []
 
-
     def __str__(self):
         return f"Initials:  + {self.initials} + \
 Finals: {self.finals}\
@@ -35,7 +34,6 @@ Pres: {self.pres}\
 Posts: {self.posts}\
 Synonyms: {self.synonyms}\
 Keys: {self.keys}"
-
 
     def get_from_file(self, path):
         key = None
