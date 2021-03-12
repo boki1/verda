@@ -1,17 +1,18 @@
 const socket = io.connect('http://' + document.domain + ':' + location.port);
 
+
 $(document).ready(function(){
     let flag = true;
     $('#btnVerda').click( function() {
         if (flag) {
             flag = false;
             $('div.row').hide();
-            // $('.header').animate({padding:'0 auto', position:'absolute, fixed', height:'100%', width:'100%'}, 'slow');
-
+            $('.header').animate({position:'relative', height:'100%', width:'100%'}, 'slow');
+            $('body').height($(window).height());
         } else {
             flag = true;
             $('div.row').show();
-            // $('.header').animate({padding:'150px'}, 'fast');
+            $('.header').animate({padding:'150px'}, 'slow');
         }
         $('#chat_and_message').slideToggle();
         $('#quote').slideToggle();
@@ -31,5 +32,9 @@ socket.on('connect', function() {
 })
 
 socket.on('print_message', function(message) {
-    $('div#chat').append('<div><b>'+'You:'+'</b>'+message+'</div>')
+    const chat = $('div#chat');
+    if ($('div.message').size() === 19) {
+        $('#chat').find('div.message').first().remove();
+    }
+    chat.append('<div class="message"><b>'+'You:'+'</b>'+message+'</div>')
 })
