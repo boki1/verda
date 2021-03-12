@@ -5,7 +5,6 @@ from memory import PhraseMemory, ContextMemory
 import random
 
 
-
 class Keystack(list):
     # TODO: Maybe change `phrases` because we dont want to pass such big object with copy
     def __init__(self, sentence: str, phrasing_memory: PhraseMemory):
@@ -17,13 +16,11 @@ class Keystack(list):
             except KeyError:
                 logging.info("Word '{word}' is not matched to any of the keywords.")
 
-
     def prioratize(self):
         return sorted(self)
 
 
 class VerdaEngine:
-
     def __init__(self):
         self.context_memory = ContextMemory()
         self.phrases = PhraseMemory()
@@ -33,7 +30,7 @@ class VerdaEngine:
     @staticmethod
     def clear_punctuation(sentence: str) -> str:
         logging.debug("Before de-punctuation: '{sentence}'")
-        filtered = str(list(filter(lambda symbol: symbol not in PUNCTUATORS)))        
+        filtered = str(list(filter(lambda symbol: symbol not in PUNCTUATORS)))
         logging.debug("After de-punctuation: '{filtered}'")
         return filtered
 
@@ -45,7 +42,7 @@ class VerdaEngine:
     def answer_to(self, question: str) -> str:
         sentence = self.clear_punctuation(question)
         ks = Keystack(sentence, self.phrases)
-        
+
         try:
             self.answers.append(self.get_output(ks, sentence))
         except DecompositionRuleNotFoundException:

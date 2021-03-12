@@ -48,7 +48,7 @@ class PhraseParser:
 
         if filename is not None:
             self.get_from_file(filename)
-            
+
 
     def __str__(self):
         return f"Initials:  + {self.initial} + \
