@@ -1,8 +1,23 @@
+from engine import VerdaException
+
+
+class DecompositionRuleNotFoundException(VerdaException):
+
+    def __init__(self):
+        super().__init__
+
+
+class ReassemblyRuleNotFoundException(VerdaException):
+
+    def __init__(self):
+        super().__init__
+
+
 class Keyword:
     def __init__(self, word=None, weight=None, decomposition=None):
         self.word = word
         self.weight = weight
-        self.decomposition = decomposition
+        self.decomposition_rules = decomposition
 
     def __le__(self, other):
         return self.weight >= other.weight
@@ -16,19 +31,24 @@ class Decomposition:
 
 
 class PhraseParser:
-    def __init__(self):
-        self.initials = []
-        self.finals = []
+
+    def __init__(self, filename: str = None):
+        self.filename = filename
+        self.initial: str = ""
+        self.final: str = ""
         self.quits = []
         self.pres = []
         self.posts = []
         self.synonyms = []
         self.keys = {}
-        self.memory = []
+
+        if filename is not None:
+            self.get_from_file(filename)
+            
 
     def __str__(self):
-        return f"Initials:  + {self.initials} + \
-Finals: {self.finals}\
+        return f"Initials:  + {self.initial} + \
+Finals: {self.final}\
 Quits: {self.quits} \
 Pres: {self.pres}\
 Posts: {self.posts}\
@@ -45,9 +65,9 @@ Keys: {self.keys}"
                 tag, content = [part.strip() for part in line.split(':')]
 
                 if tag == 'initial':
-                    self.initials.append(content)
+                    self.initial = content
                 elif tag == 'final':
-                    self.finals.append(content)
+                    self.final = content
                 elif tag == 'quit':
                     self.quits.append(tuple(content.split(" ")))
                 elif tag == 'pre':
@@ -74,7 +94,10 @@ Keys: {self.keys}"
                         save = True
                         words = words[1:]
                     decomposition = Decomposition(words, save, [])
-                    key.decomposition.append(decomposition)
+                    key.decomposition_rules.append(decomposition)
                 elif tag == 'reasmb':
                     words = content.split(" ")
                     decomposition.reassembly.append(words)
+
+    def at_key(self, keyword: str) -> Keyword:
+        return self.keys[keyword]

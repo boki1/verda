@@ -13,7 +13,7 @@ def main():
     verda = PhraseParser()
     verda.get_from_file("../../misc/eco.phrases")
     print(verda)
-    
+
 
 if __name__ == "__main__":
     main()
