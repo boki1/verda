@@ -1,5 +1,5 @@
 import logging
-from script_reader import PhraseParser
+from components import PhraseParser
 
 
 def setup_logging():

@@ -1,17 +1,18 @@
 from string import punctuation as PUNCTUATORS
 import logging
-from script_reader import Keyword, PhraseParser
+from components import Keyword, PhraseParser, DecompositionRuleNotFoundException, ReassemblyRuleNotFoundException
 from memory import PhraseMemory, ContextMemory
 import random
 
 
+
 class Keystack(list):
     # TODO: Maybe change `phrases` because we dont want to pass such big object with copy
-    def __init__(self, sentence: str, phrases: PhraseMemory):
-        # super.__init__()
+    def __init__(self, sentence: str, phrasing_memory: PhraseMemory):
+        super.__init__()
         for word in sentence.split(' '):
             try:
-                key_obj = phrases.try_by_key(word)
+                key_obj = phrasing_memory.phrases.by_key(word)
                 self.append(key_obj)
             except KeyError:
                 logging.info("Word '{word}' is not matched to any of the keywords.")
@@ -19,15 +20,6 @@ class Keystack(list):
 
     def prioratize(self):
         return sorted(self)
-
-
-class VerdaException(Exception):
-    def __init__(self, msg: str):
-        self.msg = msg
-
-    def why(self) -> str:
-        return self.msg
-
 
 
 class VerdaEngine:

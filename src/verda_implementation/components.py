@@ -1,16 +1,20 @@
-from engine import VerdaException
+class VerdaException(Exception):
+    def __init__(self, msg: str):
+        self.msg = msg
 
+    def why(self) -> str:
+        return self.msg
 
 class DecompositionRuleNotFoundException(VerdaException):
 
-    def __init__(self):
-        super().__init__
+    def __init__(self, sentence: str, expression: str):
+        super().__init__(f"Couldn't match '{expression}' to '{sentence}'.")
 
 
 class ReassemblyRuleNotFoundException(VerdaException):
 
     def __init__(self):
-        super().__init__
+        super().__init__("<reassembly failed>")
 
 
 class Keyword:
