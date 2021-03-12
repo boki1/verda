@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/verda_background.jpeg");
+    background-image: url("../static/images/verda_background.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -51,4 +51,12 @@ body {
     background-color: white;
     border-width: 3px;
     border-color: black;
+}
+
+.kristiyanImg {
+    background-image: url('../static/images/kristiyanImg.jpeg');
+    size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
