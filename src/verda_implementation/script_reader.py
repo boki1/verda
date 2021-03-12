@@ -24,7 +24,6 @@ class PhraseParser:
         self.posts = []
         self.synonyms = []
         self.keys = {}
-        self.memory = []
 
     def __str__(self):
         return f"Initials:  + {self.initials} + \

@@ -38,6 +38,12 @@ synon: animals animal biodiversity
 synon: affect affecting
 synon: happen happening
 
+key: xnone
+    decomp: *
+        reasmb: I'm not sure I understand you fully.
+        reasmb: Please tell me something that i can understand !
+        reasmb: Please, tell me something about the nature !
+        reasmb: Do you feel strongly about discussing such things ?
 key: hello
 	decomp: *
 		reasmb: Hi. What ecological problem are you interested in 👋😀?
