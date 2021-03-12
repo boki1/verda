@@ -1,25 +1,37 @@
 <!doctype html>
-<html>
-  <head lang="en">
+<html lang="en">
+  <head>
 
-    <link rel="stylesheet" href="../static/homepage.css"> 
+    <link rel="stylesheet" href="../static/homepage.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="{{url_for('static', filename='chat.js')}}"></script>
     <style>
-        
+
     </style>
+    <title>Verda - chatbot</title>
   </head>
   <body>
     
     <div class="header">
       <h1>Verda</h1>
-      <p>Every forest starts with 1 acorn</p>
-      <button onclick="document.location.href='verda_chatbot.html'" id="btnVerda" type="button" class="btn btn-secondary">Press here to chat with Verda</button>    
+      <p id="quote">Every forest starts with 1 acorn</p>
+      <button id="btnVerda" type="button" class="btn btn-secondary">Press here to toggle chat with Verda</button>
+      <div id="chat_and_message" style="display: none;">
+        <div id="chat"></div>
+        <form id="message" method="POST">
+          <label>
+            Message: <input type="text" class="message"/>
+          </label>
+          <input type="submit"/>
+        </form>
+      </div>
     </div>
 
     <div class="row">

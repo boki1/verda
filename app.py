@@ -7,18 +7,13 @@ socket = SocketIO(app)
 
 
 @app.route('/', methods=['GET', 'POST'])
-def sessions():
-    return render_template('chat.html')
-
-
-def message_received(methods=['GET', 'POST']):
-    print('message was received!!!')
+def index():
+    return render_template('homepage.html')
 
 
 @socket.on('send')
-def send(json, methods=['GET', 'POST']):
-    print('received my event: ' + str(json))
-    socket.emit('my response', json, callback=message_received)
+def send(data, methods=['GET', 'POST']):
+    socket.emit('print_message', data)
 
 
 if __name__ == '__main__':
