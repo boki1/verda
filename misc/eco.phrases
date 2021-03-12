@@ -1,0 +1,103 @@
+initial: Hey.
+final: Goodbye. Stay eco :).
+
+quit: bye
+quit: goodbye
+quit: quit
+
+pre: dont don't
+pre: cant can't
+pre: wont won't
+pre: recollect remember
+pre: dreamt dreamed
+pre: dreams dream
+pre: maybe perhaps
+pre: how what
+pre: when what
+pre: certainly yes
+pre: machine computer
+pre: computers computer
+pre: were was
+pre: you're you are
+pre: i'm i am
+pre: same alike
+
+post: am are
+post: your my
+post: me you
+post: myself yourself
+post: yourself myself
+post: i you
+post: you I
+post: my your
+post: i'm you are
+
+synon: forest tree trees
+synon: deforestation destroy destroying cutting
+synon: animals animal biodiversity
+synon: affect affecting
+synon: happen happening
+
+key: hello
+	decomp: *
+		reasmb: Hi. What ecological problem are you interested in 👋😀?
+		reasmb: Hello, what would you like to now about ecology 😀?
+		reasmb: Hello, how can I help you make your life greener 😀?
+
+key: forest
+	decomp: what is * forest
+		reasmb: A forest is an environment that is covered by trees.
+		reasmb: Forests consist of trees.
+	decomp: what * happen
+		reasmb: If we don’t act and the current rates of deforestation continue, the world’s rainforests will be gone in 100 years.
+		reasmb:
+	decomp: how many * destroyed
+		reasmb: Since 2016, an average of 28 million hectares have been cut down every year.
+		reasmb: In 2016, a record of 29.7 million hectares of forest disappeared.
+		reasmb: In just 40 years, a forest area the size of Europe has gone - 1 billion hectares.
+		reasmb: Half of the world’s rainforest has been destroyed in just one century.
+
+key: deforestation
+	decomp: where *
+		reasmb: The Amazon forest is directly affected.
+		reasmb: In August of 2019, over 30.000 individual fires in the Amazon. Three times the usual number.
+	decomp: why * happen
+		reasmb: Overuse of paper is one essential part.
+	decomp: why * bad
+		reasmb: The loss of tree cover has a number of negative effects on the planet.
+		reasmb: Deforestation destroys wildlife habitat and is a key reason for animal extinction.
+		reasmb: The clearing of forests is a big contributor to global climate change.
+		reasmb: Trees are essential to the water cycle. In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments.
+		reasmb: Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil.
+		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert.
+		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction.
+		reasmb: The loss of tree cover has a number of negative effects on the planet.
+	decomp: * help *
+		reasmb: Buy forest-friendly products.
+		reasmb: Something really needs to change. The world population is growing by the minute and so is the global consumer class.
+		reasmb: Plant a tree 😀.
+		reasmb: Do not overuse paper.
+
+key: deutsch
+  decomp: *
+    reasmb: foreign-lang
+    reasmb: Ich spreche vorerst kein Deutsch.
+
+key: francais
+  decomp: *
+    reasmb: foreign-lang
+    reasmb: Je ne parle pas français pour le moment
+
+key: italiano
+  decomp: *
+    reasmb: foreign-lang
+    reasmb: Per ora non parlo italiano.
+
+key: espanol
+  decomp: *
+    reasmb: goto foreign-lang
+    reasmb: No hablo español por ahora.
+
+key: foreign-lang
+  decomp: *
+    reasmb: I speak only English for now.
