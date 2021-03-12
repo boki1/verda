@@ -1,0 +1,54 @@
+body {
+    background-image: url("../images/verda_background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    text-align: center;
+    background-color: #00d456;
+    padding: 150px;
+}
+
+.header h1 {
+    font-size: 60px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.header #btnVerda {
+    position: relative;
+}
+
+#main {
+    background-color: transparent;
+    opacity: 0.8;
+    border-width: 10px;
+}
+
+#problemCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
+
+#solutionCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
+
+#aboutCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
+
+#contactsCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
