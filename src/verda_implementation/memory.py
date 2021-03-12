@@ -35,7 +35,7 @@ class PhraseMemory:
                 output.extend(sub[word.lower()])
             else:
                 output.append(word)
-        logging.debug("After pre-replacement: %s", output)
+        logging.debug("After pre-replacement: {output}")
         return output
 
     @staticmethod

@@ -3,6 +3,7 @@ import logging
 from components import Keyword, PhraseParser, DecompositionRuleNotFoundException, ReassemblyRuleNotFoundException
 from memory import PhraseMemory, ContextMemory
 import random
+from enum import IntEnum
 
 
 class Keystack(list):
@@ -20,12 +21,20 @@ class Keystack(list):
         return sorted(self)
 
 
+class Globals(IntEnum):
+    HELLO_IDX = 0
+    GOODBYE_IDX = 1
+    END_CONVERSATION = 0
+    RESULT_CONVERSATION = 1
+
+
 class VerdaEngine:
+
     def __init__(self):
         self.context_memory = ContextMemory()
         self.phrases = PhraseMemory()
         self.answers = []
-
+        self.done_greetings = [False, False]
 
     @staticmethod
     def clear_punctuation(sentence: str) -> str:
@@ -34,26 +43,30 @@ class VerdaEngine:
         logging.debug("After de-punctuation: '{filtered}'")
         return filtered
 
+    def loop(self):
+        if self.done_greetings[Globals.HELLO_IDX]:
+            self.conversation_begin()
 
-    def get_output(self, ks: Keystack, sentence: str) -> str:
-        pass
+        while True:
+            inp = input('> ')
+            res = self.answer_to(inp)
+            if res[Globals.END_CONVERSATION]:
+                self.conversation_end()
+                return
+            print(res[Globals.RESULT_CONVERSATION])
 
-
-    def answer_to(self, question: str) -> str:
+    def answer_to(self, question: str) -> (bool, str):
         sentence = self.clear_punctuation(question)
-        ks = Keystack(sentence, self.phrases)
+        _keystack = Keystack(sentence, self.phrases)
 
-        try:
-            self.answers.append(self.get_output(ks, sentence))
-        except DecompositionRuleNotFoundException:
-            pass
-        except ReassemblyRuleNotFoundException:
-            pass
-
+        return False, ''
 
     def conversation_begin(self) -> str:
-        return self.phrases.hello_greeting()
+        self.phrases.hello_greeting()
+        self.done_greetings[Globals.HELLO_IDX] = True
 
 
     def conversation_end(self) -> str:
-        return self.phrases.goodbye_greeting()
+        self.phrases.goodbye_greeting()
+        self.done_greetings[Globals.GOODBYE_IDX] = True
+

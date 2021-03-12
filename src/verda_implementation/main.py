@@ -1,5 +1,6 @@
 import logging
 from components import PhraseParser
+from engine import VerdaEngine
 
 
 def setup_logging():
@@ -10,10 +11,10 @@ def setup_logging():
 def main():
     setup_logging()
 
-    verda_parser = PhraseParser("../../misc/eco.phrases")
-    print(verda_parser)
-
-    
+    # verda_parser = PhraseParser("../../misc/eco.phrases")
+    # print(verda_parser)
+    verda_engine = VerdaEngine()
+    verda_engine.loop()
 
 
 if __name__ == "__main__":
