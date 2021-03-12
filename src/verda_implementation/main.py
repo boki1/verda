@@ -10,9 +10,10 @@ def setup_logging():
 def main():
     setup_logging()
 
-    verda = PhraseParser()
-    verda.get_from_file("../../misc/eco.phrases")
-    print(verda)
+    verda_parser = PhraseParser("../../misc/eco.phrases")
+    print(verda_parser)
+
+    
 
 
 if __name__ == "__main__":

@@ -13,8 +13,8 @@ class DecompositionRuleNotFoundException(VerdaException):
 
 class ReassemblyRuleNotFoundException(VerdaException):
 
-    def __init__(self):
-        super().__init__("<reassembly failed>")
+    def __init__(self, expression: str, decomposed: str):
+        super().__init__("Couldn't reassembly '{decomposed}' by '{expression}')")
 
 
 class Keyword:
