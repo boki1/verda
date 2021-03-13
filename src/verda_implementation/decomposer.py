@@ -36,7 +36,7 @@ class Decomposer:
         return False
 
     def decompose(self, sentence: str, expression_parts: list) -> bool:
-        if not (sentence and expression_parts):
+        if not sentence and not expression_parts:
             return True
         if not expression_parts:
             return False
