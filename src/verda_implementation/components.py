@@ -47,7 +47,7 @@ class Keyword:
         self.decomposition_rules = decomposition
 
     def __lt__(self, other):
-        return self.weight < other.weight
+        return self.weight > other.weight
 
 
 class DecompositionRule:

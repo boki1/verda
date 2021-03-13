@@ -36,7 +36,7 @@ class Decomposer:
         return False
 
     def decompose(self, sentence: str, expression_parts: list) -> bool:
-        if not sentence and not expression_parts:
+        if not (sentence and expression_parts):
             return True
         if not expression_parts:
             return False
@@ -126,7 +126,7 @@ class Decomposer:
                 logging.debug(f"Goto key: {goto_key}")
                 return self.process_keyword(sentence, PhraseMemory.keyword(goto_key))
             try:
-                print(reassembly_rule)
+                print(" ".join(reassembly_rule))
                 output = Reassembler.reassemble(" ".join(reassembly_rule), self.decomposed_sentence_as_list)
             except ReassemblyRuleNotFoundException:
                 raise
