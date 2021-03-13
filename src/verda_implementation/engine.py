@@ -11,8 +11,6 @@ from reassembler import Reassembler
 class Globals(IntEnum):
     HELLO_IDX = 0
     GOODBYE_IDX = 1
-    END_CONVERSATION = 0
-    RESULT_CONVERSATION = 1
 
 
 class VerdaEngine:
@@ -40,11 +38,12 @@ class VerdaEngine:
 
         while True:
             inp = input('> ')
-            res = self.answer_to(inp)
-            if res[Globals.END_CONVERSATION]:
+            if inp in PhraseMemory.goodbye_messages():
                 self.conversation_end()
-                return
-            print(res[Globals.RESULT_CONVERSATION])
+                break
+
+            answer = self.answer_to(inp)
+            print(answer)
 
     def answer_to(self, question: str) -> str:
         sentence = self.clear_punctuation(question)

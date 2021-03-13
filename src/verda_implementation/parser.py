@@ -114,7 +114,7 @@ Keys: {self.keys}"
                     key.decomposition_rules.append(decomposition)
                     for pre in data[tag][decompose]:
                         words = pre.split(" ")
-                        decomposition.reassembly.append(words)
+                        decomposition.reassembly_rules.append(words)
         self.pres = specials['pre']
         self.posts = specials['post']
         self.synonyms = specials['synon']

@@ -49,6 +49,10 @@ class PhraseMemory:
             return cls.phrases.keys
 
     @classmethod
+    def goodbye_messages(cls):
+        return cls.phrases.quits
+
+    @classmethod
     def keyword(cls, kw: str) -> Keyword:
         if cls.phrases:
             return cls.keywords()[kw]

@@ -70,7 +70,7 @@ class Decomposer:
             if self.decompose(sentence, rule.parts):
                 return
         except ValueError as v_err:
-            raise DecompositionRuleNotFoundException(sentence, rule.expression, msg=str(v_err))
+            raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts), msg=str(v_err))
 
         logging.debug(f'Decomposition results before post-substitution: {self.decomposed_sentence_as_list}')
         self.decomposed_sentence_as_list = [Reassembler.replace(words, PhraseMemory.post_substitutors) for words in
@@ -108,7 +108,7 @@ class Decomposer:
             self.apply_decomposition_rule(rule, sentence)
             if not self.decomposed_sentence_as_list:
                 logging.debug(f'Decomposition did not match: {rule.parts}')
-                raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.expression))
+                raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts))
             else:
                 self.possible_decompositions.append(' '.join(self.decomposed_sentence_as_list))
                 logging.debug(f'Decomposition successfully matched: {rule.parts} and gave results {self.decomposed_sentence_as_list}.')
