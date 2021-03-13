@@ -11,10 +11,17 @@ def index():
     return render_template('homepage.html')
 
 
-@socket.on('send')
-def send(data, methods=['GET', 'POST']):
-    socket.emit('print_message', data)
+@socket.on('send_usr_message')
+def send_usr_message(data, methods=['GET', 'POST']):
+    socket.emit('print_usr_message', data)
+
+
+@socket.on('send_bot_message')
+def send_bot_message(data, methods=['GET', 'POST']):
+    socket.emit('print_bot_message', data)  
+
+
 
 
 if __name__ == '__main__':
-    socket.run(app, debug=True, port=port)
+    socket.run(app, debug=True)

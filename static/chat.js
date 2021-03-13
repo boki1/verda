@@ -26,13 +26,18 @@ socket.on('connect', function() {
         e.preventDefault()
         let message = input.val().trim();
         if (message !== '') {
-            socket.emit('send', message)
+            socket.emit('send_usr_message', message)
             input.val('').focus()
         }
     });
 })
 
-socket.on('print_message', function(message) {
+socket.on('print_bot_message', function(message) {
+    const chat = $('div#chat');
+    chat.append('<br><br><br>' + '<div class="botMessage"><p>' + message + '</p></div>')
+})
+
+socket.on('print_usr_message', function(message) {
     const chat = $('div#chat');
     chat.append('<br><br><br>' + '<div class="usrMessage"><p>' + message + '</p></div>')
 })
