@@ -84,3 +84,16 @@ body {
 .author {
     color: cornflowerblue;
 }
+
+#chat {
+    height: 500px;
+    width: 500;
+    overflow: auto;
+    background-color: #a2a586;
+    opacity: 0.9;
+    position: relative;
+}
+
+#content {
+    margin: 0px;
+}
