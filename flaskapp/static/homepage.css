@@ -1,0 +1,161 @@
+body {
+    background-image: url('../static/images/tree_background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    background-image: url('../static/images/header_background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height: '100%';
+    width: '100%';
+    padding: 150px;
+}
+
+.header h1 {
+    font-size: 60px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.header #btnVerda {
+    position: relative;
+}
+
+#main {
+    opacity: 0.8;
+    border-width: 10px;
+}
+
+#problemCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
+
+#solutionCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
+
+#aboutCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+}
+
+#contactsCard {
+    background-color: white;
+    border-width: 3px;
+    border-color: black;
+    width: 100%;
+}
+
+#contactsCard h2 {
+    size: 40;
+}
+
+#slideshow {
+    margin: 50px auto;
+    position: relative;
+    background-color: antiquewhite;
+    opacity: 0.8;
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow>div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.slides q {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.author {
+    color: cornflowerblue;
+}
+
+#chat {
+    height: 500px;
+    width: 500;
+    overflow: auto;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 0.9;
+    position: relative;
+}
+
+#content {
+    padding-left: 20px;
+    margin: 0px;
+}
+
+.botMessage {
+    float: left;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-style: oblique;
+    border-radius: 10px;
+    background-color: #3ca59d;
+}
+
+.botMessage p {
+    color: whitesmoke;
+    float: left;
+}
+
+.usrMessage {
+    float: right;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-style: oblique;
+    border-radius: 10px;
+    background-color: #065446;
+}
+
+.usrMessage p {
+    color: whitesmoke;
+    float: right;
+}
+
+.devInfo {
+    padding: 40px;
+    size: 50%;
+}
+
+#devInfo2,
+#devinfo4 {
+    float: right;
+}
+
+#devInfo1,
+#devInfo3 {
+    float: left;
+}
+
+.logo {
+    height: 25px;
+    width: 40px;
+    background-image: url('../static/images/full_name_logo2.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    position: relative;
+    align-items: center;
+}
