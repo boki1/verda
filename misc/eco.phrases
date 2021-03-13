@@ -38,7 +38,7 @@ post: i'm you are
 synon: forest tree trees
 synon: deforestation destroy destroying cutting
 synon: animals animal biodiversity
-synon: population people populace citizens citizenry natives society
+synon: population people populace citizens citizenry natives societyf
 
 key: xnone
     decomp: *
@@ -79,7 +79,6 @@ key: deforestation
 		reasmb: Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil.
 		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert.
 		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction.
-		reasmb: The loss of tree cover has a number of negative effects on the planet.
 	decomp: * help * @deforestation *
 		reasmb: Buy forest-friendly products.
 		reasmb: Something really needs to change. The world population is growing by the minute and so is the global consumer class.
