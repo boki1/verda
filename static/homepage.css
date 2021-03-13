@@ -102,6 +102,10 @@ body {
     margin: 0px;
 }
 
+.message p {
+    color: whitesmoke;
+}
+
 #logoPic {
     height: 100px;
     width: 100px;
