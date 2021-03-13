@@ -59,10 +59,28 @@ body {
     size: 40;
 }
 
-.kristiyanImg {
-    background-image: url('../static/images/kristiyanImg.jpeg');
-    size: 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+#slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow>div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.slides q {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.author {
+    color: cornflowerblue;
 }
