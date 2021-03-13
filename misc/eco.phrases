@@ -66,12 +66,17 @@ key: forest
 		reasmb: Half of the world’s rainforest has been destroyed in just one century.
 
 key: deforestation
-	decomp: where * @deforestation *
+	decomp: * can * help *
+		reasmb: (1) can help if (1) buy forest-friendly products.
+		reasmb: I agree that something really needs to change.
+		reasmb: Plant a tree 😀.
+		reasmb: Do not overuse paper.
+	decomp: where *
 		reasmb: The Amazon forest is directly affected.
 		reasmb: In August of 2019, over 30.000 individual fires in the Amazon. Three times the usual number.
-    decomp: why * @deforestation * happen *
+    decomp: why * happen *
 		reasmb: Overuse of paper is one essential part.
-	decomp: why * @deforestation * bad *
+	decomp: why * bad *
 		reasmb: The loss of tree cover has a number of negative effects on the planet.
 		reasmb: Deforestation destroys wildlife habitat and is a key reason for animal extinction.
 		reasmb: The clearing of forests is a big contributor to global climate change.
@@ -79,11 +84,6 @@ key: deforestation
 		reasmb: Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil.
 		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert.
 		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction.
-	decomp: * help * @deforestation *
-		reasmb: Buy forest-friendly products.
-		reasmb: Something really needs to change. The world population is growing by the minute and so is the global consumer class.
-		reasmb: Plant a tree 😀.
-		reasmb: Do not overuse paper.
 
 key: population
     decomp: * @population * has increased *

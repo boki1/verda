@@ -1,24 +1,11 @@
 from string import punctuation as PUNCTUATORS
 import logging
-from components import Keyword, PhraseParser, DecompositionRuleNotFoundException, ReassemblyRuleNotFoundException
-from memory import PhraseMemory, ContextMemory
-import random
+from components import DecompositionRuleNotFoundException, ReassemblyRuleNotFoundException, KeywordProcessingFailedException
+from memory import PhraseMemory, Keystack
 from enum import IntEnum
-
-
-class Keystack(list):
-    # TODO: Maybe change `phrases` because we dont want to pass such big object with copy
-    def __init__(self, sentence: str, phrasing_memory: PhraseMemory):
-        super.__init__()
-        for word in sentence.split(' '):
-            try:
-                key_obj = phrasing_memory.phrases.by_key(word)
-                self.append(key_obj)
-            except KeyError:
-                logging.info("Word '{word}' is not matched to any of the keywords.")
-
-    def prioratize(self):
-        return sorted(self)
+from copy import copy as shallow_copy
+from decomposer import Decomposer
+from reassembler import Reassembler
 
 
 class Globals(IntEnum):
@@ -31,20 +18,24 @@ class Globals(IntEnum):
 class VerdaEngine:
 
     def __init__(self):
-        self.context_memory = ContextMemory()
-        self.phrases = PhraseMemory()
-        self.answers = []
+        self.phrasing_memory = PhraseMemory.instance()
+
+        self.context_memory = []
+        self.decomposer = Decomposer(self.context_memory)
+        self.reassembler = Reassembler()
+
+        # self.answers = []
         self.done_greetings = [False, False]
 
     @staticmethod
     def clear_punctuation(sentence: str) -> str:
         logging.debug("Before de-punctuation: '{sentence}'")
-        filtered = str(list(filter(lambda symbol: symbol not in PUNCTUATORS)))
+        filtered = ''.join(list(filter(lambda symbol: symbol not in PUNCTUATORS, sentence)))
         logging.debug("After de-punctuation: '{filtered}'")
         return filtered
 
     def loop(self):
-        if self.done_greetings[Globals.HELLO_IDX]:
+        if not self.done_greetings[Globals.HELLO_IDX]:
             self.conversation_begin()
 
         while True:
@@ -55,18 +46,29 @@ class VerdaEngine:
                 return
             print(res[Globals.RESULT_CONVERSATION])
 
-    def answer_to(self, question: str) -> (bool, str):
+    def answer_to(self, question: str) -> str:
         sentence = self.clear_punctuation(question)
-        _keystack = Keystack(sentence, self.phrases)
+        sentence = sentence.lower()
+        keywords = Keystack(sentence, shallow_copy(self.phrasing_memory))
+        keywords = keywords.prioritize()
 
-        return False, ''
+        response = ""
 
-    def conversation_begin(self) -> str:
-        self.phrases.hello_greeting()
+        try:
+            response: str = self.decomposer.process_keywords(keywords, sentence)
+        except ReassemblyRuleNotFoundException as r_err: 
+            logging.exception(r_err.msg)
+        except DecompositionRuleNotFoundException as d_err:
+            logging.exception(d_err.msg)
+        except KeywordProcessingFailedException as k_err:
+            logging.exception(k_err.msg)
+
+        return response
+
+    def conversation_begin(self):
+        print(PhraseMemory.hello_greeting())
         self.done_greetings[Globals.HELLO_IDX] = True
 
-
-    def conversation_end(self) -> str:
-        self.phrases.goodbye_greeting()
+    def conversation_end(self):
+        print(PhraseMemory.goodbye_greeting())
         self.done_greetings[Globals.GOODBYE_IDX] = True
-
