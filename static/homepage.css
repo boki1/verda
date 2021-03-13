@@ -117,14 +117,6 @@ body {
     color: whitesmoke;
 }
 
-#logoPic {
-    height: 100px;
-    width: 100px;
-    position: relative;
-    left: 20px;
-    top: 20px;
-}
-
 .devInfo {
     padding: 40px;
     size: 50%;
@@ -140,19 +132,12 @@ body {
     float: left;
 }
 
-
-/* #columnRight {
-    background-color: white;
-    width: 50%;
+.logo {
+    height: 25px;
+    width: 40px;
+    background-image: url('../static/images/full_name_logo2.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     position: relative;
-    float: right;
-    padding: 40px;
+    align-items: center;
 }
-
-#columnLeft {
-    background-color: white;
-    width: 50%;
-    position: relative;
-    float: left;
-    padding: 40px;
-} */

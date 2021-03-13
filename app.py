@@ -17,4 +17,4 @@ def send(data, methods=['GET', 'POST']):
 
 
 if __name__ == '__main__':
-    socket.run(app, debug=True)
+    socket.run(app, debug=True, port=port)

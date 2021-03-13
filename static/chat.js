@@ -32,7 +32,7 @@ socket.on('connect', function() {
     });
 })
 
-socket.on('print_message_usr', function(message) {
+socket.on('print_message', function(message) {
     const chat = $('div#chat');
     chat.append('<br><br><br>' + '<div class="usrMessage"><p>' + message + '</p></div>')
 })
