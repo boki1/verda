@@ -53,6 +53,7 @@ body {
     background-color: white;
     border-width: 3px;
     border-color: black;
+    width: 100%;
 }
 
 #contactsCard h2 {
@@ -102,7 +103,17 @@ body {
     margin: 0px;
 }
 
-.message p {
+.usrMessage {
+    float: right;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-style: oblique;
+    border-radius: 10px;
+    background-color: green;
+}
+
+.usrMessage p {
     color: whitesmoke;
 }
 
@@ -113,3 +124,35 @@ body {
     left: 20px;
     top: 20px;
 }
+
+.devInfo {
+    padding: 40px;
+    size: 50%;
+}
+
+#devInfo2,
+#devinfo4 {
+    float: right;
+}
+
+#devInfo1,
+#devInfo3 {
+    float: left;
+}
+
+
+/* #columnRight {
+    background-color: white;
+    width: 50%;
+    position: relative;
+    float: right;
+    padding: 40px;
+}
+
+#columnLeft {
+    background-color: white;
+    width: 50%;
+    position: relative;
+    float: left;
+    padding: 40px;
+} */

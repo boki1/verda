@@ -34,5 +34,5 @@ socket.on('connect', function() {
 
 socket.on('print_message_usr', function(message) {
     const chat = $('div#chat');
-    chat.append('<br><br><br>' + '<div class="message" style="float: right; font-color: white; padding-top: 10px; padding-left: 15px; padding-right: 15px; font-style: oblique; border-radius: 10px; background-color: green;"><p>' + message + '</p></div>')
+    chat.append('<br><br><br>' + '<div class="usrMessage"><p>' + message + '</p></div>')
 })
