@@ -67,7 +67,7 @@ class Keystack(list):
                 key_obj = PhraseMemory.phrases.at_key(word)
                 self.append(key_obj)
             except KeyError:
-                logging.info("Word '{word}' is not matched to any of the keywords.")
+                logging.info(f"Word '{word}' is not matched to any of the keywords.")
 
     def prioritize(self):
         return sorted(self)

@@ -11,8 +11,7 @@ from reassembler import Reassembler
 class Decomposer:
 
     def __init__(self, context_memory: list = None):
-        self.possible_decompositions = []
-        self.decomposed_sentence_as_list = []
+        self.decomposition_result = []
         self.context_memory = context_memory
 
     def parse_synonym(self, sentence: str, expression_parts: list) -> bool:
@@ -20,27 +19,43 @@ class Decomposer:
         root = expression_parts[0][1:]
         if root not in PhraseMemory.synonyms():
             raise ValueError(f"Unknown synonym root {root}")
-        if words[0].lower() not in PhraseMemory.synonyms[root]:
+        if words[0].lower() not in PhraseMemory.synonyms()[root]:
             return False
-        self.possible_decompositions.append([words[0]])
+        # TODO:
         return self.decompose(expression_parts[1:], words[1:])
 
     def parse_asterisk(self, sentence: str, expression_parts: list) -> bool:
         words = sentence.split(' ')
         for i in range(len(words), -1, -1):
-            self.decomposed_sentence_as_list.append(words[:i])
-            short_sentence = ''.join(words[i:])
+            self.decomposition_result.append(words[:i])
+            short_sentence = ' '.join(words[i:])
             if self.decompose(short_sentence, expression_parts[1:]):
                 return True
-            self.decomposed_sentence_as_list.pop()
+            self.decomposition_result.pop()
         return False
 
+    def parse_goto(self, goto_key: str, sentence: str):
+        if goto_key not in PhraseMemory.keywords():
+            raise ValueError(f"Invalid `goto` keyword syntax {goto_key}")
+        logging.debug(f"Goto key: {goto_key}")
+        return self.process_keyword(sentence, PhraseMemory.keyword(goto_key))
+
     def decompose(self, sentence: str, expression_parts: list) -> bool:
-        if not (sentence and expression_parts):
+
+        if not sentence and not expression_parts:
+            logging.info(f"'{sentence}' == None and '{expression_parts}' == None")
             return True
+        else:
+            logging.info(f"'{sentence}' != None and/or '{expression_parts}' != None")
+
         if not expression_parts:
+            logging.info(f"'{expression_parts}' == None")
             return False
-        if not sentence and ''.join(expression_parts) != PhraseMemory.MATCH_ANYTHING:
+        else:
+            logging.info(f"'{expression_parts}' != None")
+
+        if not sentence and expression_parts[0] != PhraseMemory.MATCH_ANYTHING:
+            logging.info(f"'{sentence}' != None and/or '{expression_parts}' != {PhraseMemory.MATCH_ANYTHING} (=*)")
             return False
 
         words = sentence.split(' ')
@@ -54,29 +69,20 @@ class Decomposer:
         if first_token.lower() != first_word.lower():
             return False
 
-        return self.decompose(sentence[1:], expression_parts[1:])
-
-    @classmethod
-    def assess_decomposition_rules(cls, available_rules: list):
-        if not available_rules:
-            return None
-        picked = random_choice(available_rules)
-        logging.info(f"'{picked}' picked over other options as decomposition rule.")
-        return picked
+        return self.decompose(' '.join(words[1:]), expression_parts[1:])
 
     def apply_decomposition_rule(self, rule: DecompositionRule, sentence: str):
-        self.possible_decompositions.clear()
         try:
-            if self.decompose(sentence, rule.parts):
+            if not self.decompose(sentence, rule.parts):
                 return
         except ValueError as v_err:
             raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts), msg=str(v_err))
 
-        logging.debug(f'Decomposition results before post-substitution: {self.decomposed_sentence_as_list}')
-        self.decomposed_sentence_as_list = [Reassembler.replace(words, PhraseMemory.post_substitutors) for words in
-                                        self.decomposed_sentence_as_list]
-        logging.debug(f'Decomposition results after post-substitution: {self.decomposed_sentence_as_list}')
-        return self.possible_decompositions
+        logging.debug(f'Decomposition results before post-substitution: {self.decomposition_result}')
+
+        subs = dict(PhraseMemory.post_substitutors())
+        self.decomposition_result = [Reassembler.replace(phrase, subs) for phrase in self.decomposition_result]
+        logging.debug(f'Decomposition results after post-substitution: {self.decomposition_result}')
 
     def process_keywords(self, keystack: Keystack, sentence: str) -> str:
         output = None
@@ -106,28 +112,22 @@ class Decomposer:
     def process_keyword(self, sentence: str, key: Keyword) -> str:
         for rule in key.decomposition_rules:
             self.apply_decomposition_rule(rule, sentence)
-            if not self.decomposed_sentence_as_list:
+            if not self.decomposition_result:
                 logging.debug(f'Decomposition did not match: {rule.parts}')
                 raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts))
             else:
-                print(" ".join(self.decomposed_sentence_as_list[0]))
-                self.possible_decompositions.append(" ".join(self.decomposed_sentence_as_list[0]))
                 logging.debug(f'Decomposition successfully matched: {rule.parts} '
-                              f'and gave results {self.decomposed_sentence_as_list}.')
-                logging.info(f'Possible decomposition now: {self.possible_decompositions}')
+                              f'and gave results {self.decomposition_result}.')
 
             reassembly_rule = Reassembler.next_reassembly(rule)
             logging.debug(f'Using reassembly: {reassembly_rule}')
 
             if reassembly_rule[0] == "goto":
-                goto_key = reassembly_rule[1]
-                if goto_key not in PhraseMemory.keywords():
-                    raise ValueError(f"Invalid `goto` keyword syntax {goto_key}")
-                logging.debug(f"Goto key: {goto_key}")
-                return self.process_keyword(sentence, PhraseMemory.keyword(goto_key))
+                return self.parse_goto(reassembly_rule[1], sentence)
+
             try:
-                print(reassembly_rule)
-                output = Reassembler.reassemble(" ".join(reassembly_rule), self.decomposed_sentence_as_list)
+                # print(reassembly_rule)
+                output = Reassembler.reassemble(" ".join(reassembly_rule), self.decomposition_result)
             except ReassemblyRuleNotFoundException:
                 raise
             if rule.save_enabled:

@@ -20,10 +20,10 @@ class DecompositionRuleNotFoundException(VerdaException):
 
 
 class KeywordProcessingFailedException(VerdaException):
-    
+
     def __init__(self, keyword: str, keywords: list, rationale: str, msg: str = None):
         self.keywords = keywords
-        self.keyword = keyword 
+        self.keyword = keyword
         self.rationale = rationale
         if not msg:
             msg = f"Failed processing keyword '{self.keyword}' from '{self.keywords}' keyword stack because: '{self.rationale}'."
@@ -47,7 +47,7 @@ class Keyword:
         self.decomposition_rules = decomposition
 
     def __lt__(self, other):
-        return self.weight < other.weight
+        return self.weight > other.weight
 
 
 class DecompositionRule:

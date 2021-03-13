@@ -5,14 +5,14 @@ from random import choice as random_choice
 
 class Reassembler:
     @staticmethod
-    def replace(words, sub):
+    def replace(words, subscribtors):
         output = list()
         for word in words:
-            if word.lower() in sub:
-                output.extend(sub[word.lower()])
+            if word in subscribtors.keys():
+                output.append(subscribtors[word])
             else:
                 output.append(word)
-        logging.debug("After pre-replacement: {output}")
+        logging.debug(f"After replacement: {output}")
         return output
 
     @staticmethod
