@@ -16,6 +16,7 @@ $(document).ready(function() {
         }
         $('#chat_and_message').slideToggle();
         $('.slideshow-container').slideToggle();
+        $('#logoPic').slideToggle();
     });
 });
 
@@ -33,8 +34,5 @@ socket.on('connect', function() {
 
 socket.on('print_message', function(message) {
     const chat = $('div#chat');
-    if ($('div.message').size() === 19) {
-        $('#chat').find('div.message').first().remove();
-    }
-    chat.append('<div class="message"><b>' + 'You:' + '</b>' + message + '</div>')
+    chat.append('<br><br>' + '<div style="float: right; font-color: white; font-style: oblique; border-radius: 10px; background-color: blue;"><p>' + message + '</p></div>')
 })
