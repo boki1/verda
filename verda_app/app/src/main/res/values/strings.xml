@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Verda_app</string>
+    <string name="chat_room">Chat Room</string>
+    <string name="enter_a_random_username">Enter a random username</string>
+    <string name="chat_with_verda">Chat with Verda</string>
+    <string name="Verda">Verda</string>
+</resources>
