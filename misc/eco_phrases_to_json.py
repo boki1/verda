@@ -1,6 +1,3 @@
-import ast
-
-
 class Converter:
     def __init__(self, filename: str = None):
         self._filename = filename
@@ -14,7 +11,7 @@ class Converter:
 
     def get_from_file(self, path):
         with open(path) as file:
-            with open("echo_phrases.json", "w+") as cr_file:
+            with open("eco_phrases.json", "w+") as cr_file:
                 cr_file.write("{\n")
                 key_count = 0
                 decomposition_count = 0
