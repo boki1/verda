@@ -12,7 +12,7 @@ $(document).ready(function() {
         } else {
             flag = true;
             $('div.row').show();
-            $('.header').animate({ padding: '150px' }, 'slow');
+            $('.header').animate({ position: 'auto', height: 'auto' }, 'slow');
         }
         $('#chat_and_message').slideToggle();
         $('.slideshow-container').slideToggle();
@@ -21,12 +21,20 @@ $(document).ready(function() {
 });
 
 socket.on('connect', function() {
+    $("#activate-speech-recognition").click(function() {
+        socket.emit('bot_speech_to_text_api');
+    })
     const input = $('input.message');
+    const checkbox = $('#text-to-speech-checkbox');
     $('form').on('submit', function(e) {
         e.preventDefault()
         let message = input.val().trim();
         if (message !== '') {
             socket.emit('send_usr_message', message)
+            if (checkbox.is(":checked")) {
+                socket.emit('send_bot_message', message)
+                socket.emit('bot_speech_api', message)
+            }
             input.val('').focus()
         }
     });
@@ -40,4 +48,8 @@ socket.on('print_bot_message', function(message) {
 socket.on('print_usr_message', function(message) {
     const chat = $('div#chat');
     chat.append('<br><br><br>' + '<div class="usrMessage"><p>' + message + '</p></div>')
+})
+
+socket.on('bot_digestion', function() {
+    alert("bot is lstening");
 })

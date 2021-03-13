@@ -9,7 +9,7 @@
     <a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="gflag nturl" style="background-position:-500px -200px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Russian" /></a>
 
     <style type="text/css">
-        <!-- a.gflag {
+        a.gflag {
             vertical-align: middle;
             font-size: 16px;
             padding: 1px 0;
@@ -44,8 +44,6 @@
         #google_translate_element2 {
             display: none!important;
         }
-        
-        -->
     </style>
 
     <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|bg">Bulgarian</option><option value="en|en">English</option><option value="en|de">German</option><option value="en|ru">Russian</option></select>
@@ -156,11 +154,12 @@
                 </div>
             </div>
             <form id="message" method="POST">
-                <label>
-            Message: <input type="text" class="message"/>
-          </label>
-                <input type="submit" value="Send" />
+                <label><input type="checkbox" id="text-to-speech-checkbox"> Text to speech</label><br>
+                <label>Message: <input type="text" class="message"/></label>
+                <input type="submit" value="Send" /><br>
+                <input type="button" id="activate-speech-recognition" value="Speech to text" />
             </form>
+
         </div>
     </div>
 

@@ -11,6 +11,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     text-align: center;
+    height: '100%';
+    width: '100%';
     padding: 150px;
 }
 

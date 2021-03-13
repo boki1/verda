@@ -20,6 +20,16 @@ def send_usr_message(data, methods=['GET', 'POST']):
 def send_bot_message(data, methods=['GET', 'POST']):
     socket.emit('print_bot_message', data)  
 
+@socket.on('bot_speech_api')
+def bot_speech_api(message_to_say, methods=['GET', 'POST']):
+    # here we should call the speech function with argument the message
+    pass
+
+@socket.on('bot_speech_to_text_api')
+def bot_speech_to_text_api(methods=['GET', 'POST']):
+    #here we should call the speech recognition method and bot text digestion
+    socket.emit('bot_digestion')
+
 
 
 
