@@ -73,7 +73,6 @@ Keys: {self.keys}"
                     decomposition.reassembly_rules.append(words)
 
     def get_from_file_json(self, path):
-        print("Json")
         with open(path) as f:
             data = json.load(f)
         specials = {'pre': list(), 'post': list(), 'synon': list()}

@@ -9,6 +9,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Logs
+src/verda_implementation/output.log
+
 # Distribution / packaging
 .Python
 build/

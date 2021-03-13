@@ -34,11 +34,19 @@ post: i you
 post: you I
 post: my your
 post: i'm you are
+post: forest tree trees forests
+post: deforestation destroy destroying cutting
+post: population people populace citizens citizenry natives societyf
 
-synon: forest tree trees
-synon: deforestation destroy destroying cutting
 synon: animals animal biodiversity
-synon: population people populace citizens citizenry natives societyf
+synon: belief feel think believe wish
+synon: family mother mom father dad sister brother wife children child
+synon: desire want need
+synon: sad unhappy depressed sick
+synon: happy elated glad better
+synon: cannot can't
+synon: everyone everybody nobody noone
+synon: be am is are was
 
 key: xnone
     decomp: *
@@ -68,7 +76,7 @@ key: forest
 key: deforestation
 	decomp: * can * help *
 		reasmb: (1) can help if (1) buy forest-friendly products.
-		reasmb: I agree that something really needs to change.
+		reasmb: The trend of disappearing forests can be reversed! Data suggests that replanting- and reforestation projects could do it within 30 years.
 		reasmb: Plant a tree 😀.
 		reasmb: Do not overuse paper.
 	decomp: where *
@@ -86,11 +94,11 @@ key: deforestation
 		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction.
 
 key: population
-    decomp: * @population * has increased *
+    decomp: * has increased *
         reasmb: Very good news!
         reasmb: There has been in the bat population in this region.
         reasmb: The world's population has increased greatly.
-    decomp: * @population * has decreased *
+    decomp: * has decreased *
         reasmb: Very bad news!
         reasmb: Whyyyyyyyyyyyyyyy?
         reasmb: Ohhh nooo 😥!
@@ -304,7 +312,7 @@ key: hello 2
 
 key: i 2
     decomp: * i @desire *
-        reasmb: What does wanting (3) have to do with this discussion?
+        reasmb: What does (3) have to do with this discussion?
         reasmb: What would it mean to you if you got (3)?
         reasmb: Why do you want (3)?
         reasmb: Suppose you got (3) soon?

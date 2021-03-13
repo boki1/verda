@@ -4,7 +4,6 @@ from random import choice as random_choice
 
 
 class Reassembler:
-
     @staticmethod
     def replace(words, sub):
         output = list()
@@ -21,7 +20,7 @@ class Reassembler:
         return random_choice(decomposition.reassembly_rules)
 
     @staticmethod
-    def reassemble(reassembly_rule: str, words: list[str]):
+    def reassemble(reassembly_rule: str, words: list):
         reassembly_rule_words = reassembly_rule.split(' ')
         output = list()
         for word in reassembly_rule_words:
@@ -30,7 +29,7 @@ class Reassembler:
             if word[0] == '(' and word[-1] == ')':
                 index = int(word[1:-1])
                 if index < 1 or index > len(words):
-                    raise ReassemblyRuleNotFoundException(expression=reassembly_rule, decomposed=words)
+                    raise ReassemblyRuleNotFoundException(expression=reassembly_rule, decomposed=" ".join(words))
                 insert = words[index - 1]
                 output.extend(insert)
             else:
