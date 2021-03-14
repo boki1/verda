@@ -97,6 +97,7 @@ class VerdaEngine:
                         return None
                     engine.say(translator.translate(output, lang_tgt=language))
                     engine.runAndWait()
+                    return translator.translate(output, lang_tgt=language)
                 except:
                     pass
 
