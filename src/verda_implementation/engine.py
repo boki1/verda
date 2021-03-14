@@ -6,6 +6,9 @@ from enum import IntEnum
 from copy import copy as shallow_copy
 from decomposer import Decomposer
 from reassembler import Reassembler
+from google_trans_new import google_translator
+import speech_recognition as sr
+import pyttsx3
 
 
 class Globals(IntEnum):
@@ -32,19 +35,129 @@ class VerdaEngine:
         logging.debug("After de-punctuation: '{filtered}'")
         return filtered
 
+    def convert_language(self, language, speech, text_to_speech, quits):
+        if not speech and not text_to_speech:
+            translator = google_translator()
+            while True:
+                text = input("> ")
+                text_en = translator.translate(text)
+                logging.debug('The Translated Text to english is: %s', text_en)
+
+                output = self.answer_to(text_en)
+                output = output.capitalize()
+                if text_en in quits:
+                    self.conversation_end()
+                    return None
+                print(translator.translate(output, lang_tgt=language))
+        elif speech and not text_to_speech:
+            translator = google_translator()
+            recognizer = sr.Recognizer()
+            with sr.Microphone() as source:
+                while True:
+                    try:
+                        print("> ")
+                        recognizer.adjust_for_ambient_noise(source)
+                        audio_file = recognizer.record(source, duration=5.0)
+                        text = recognizer.recognize_google(language=language, audio_data=audio_file)
+                        print("Input: " + text)
+
+                        text_en = translator.translate(text)
+                        output = self.answer_to(text_en)
+                        output = output.capitalize()
+                        if text_en in quits:
+                            self.conversation_end()
+                            return None
+                        print(translator.translate(output, lang_tgt=language))
+                    except:
+                        pass
+        elif speech and text_to_speech:
+            translator = google_translator()
+            recognizer = sr.Recognizer()
+
+            engine = pyttsx3.init()
+            voices = engine.getProperty('voices')
+            engine.setProperty("rate", 150)
+            engine.setProperty('voice', voices[2].id)
+
+            with sr.Microphone() as source:
+                while True:
+                    try:
+                        print("> ")
+                        recognizer.adjust_for_ambient_noise(source)
+                        audio_file = recognizer.record(source, duration=5.0)
+                        text = recognizer.recognize_google(language=language, audio_data=audio_file)
+                        print("Input: " + text)
+
+                        text_en = translator.translate(text)
+                        output = self.answer_to(text_en)
+                        if text_en in quits:
+                            engine.say(translator.translate(self.conversation_end(), lang_tgt=language))
+                            engine.runAndWait()
+                            return None
+                        engine.say(translator.translate(output, lang_tgt=language))
+                        engine.runAndWait()
+                    except:
+                        pass
+        elif not speech and text_to_speech:
+            translator = google_translator()
+            engine = pyttsx3.init()
+            voices = engine.getProperty('voices')
+            engine.setProperty("rate", 150)
+            engine.setProperty('voice', voices[2].id)
+            while True:
+                text = input("> ")
+                text_en = translator.translate(text)
+                print(f"The Translated Text is: {text_en}")
+
+                output = self.answer_to(text_en)
+                output = output.capitalize()
+                if text_en in quits:
+                    engine.say(translator.translate(self.conversation_end(), lang_tgt=language))
+                    engine.runAndWait()
+                    return None
+                engine.say(translator.translate(output, lang_tgt=language))
+                engine.runAndWait()
+                print(translator.translate(output, lang_tgt=language))
+
+    # def run(self):
+    #     print(self.initial())
+    #     language = input("Enter language (bg / en / ru / de): ")
+    #     speech = input("Do you want to speak to Verda (y / n): ")
+    #     if speech == 'y':
+    #         speech = True
+    #     else:
+    #         speech = False
+    #     text_to_speech = input("Do you want Verda to speak (y / n): ")
+    #     if text_to_speech == 'y':
+    #         text_to_speech = True
+    #     else:
+    #         text_to_speech = False
+    #
+    #     self.convert_language(language, speech, text_to_speech)
+    #     print(self.final())
+
     def loop(self):
         if not self.done_greetings[Globals.HELLO_IDX]:
             self.conversation_begin()
 
-        while True:
-            inp = input('> ')
-            if inp in PhraseMemory.goodbye_messages():
-                self.conversation_end()
-                break
+        language = input("Enter language (bg / en / ru / de): ")
+        speech = input("Do you want to speak to Verda (y / n): ")
+        if speech == 'y':
+            speech = True
+        else:
+            speech = False
+        text_to_speech = input("Do you want Verda to speak (y / n): ")
+        if text_to_speech == 'y':
+            text_to_speech = True
+        else:
+            text_to_speech = False
 
-            answer = self.answer_to(inp)
-            answer = answer.capitalize()
-            print(answer)
+        quits = list()
+        for i in PhraseMemory.goodbye_messages():
+            for j in i:
+                quits.append(j)
+
+        self.convert_language(language, speech, text_to_speech, quits)
 
     def answer_to(self, question: str) -> str:
         sentence = self.clear_punctuation(question)

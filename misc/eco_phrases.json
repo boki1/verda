@@ -2,13 +2,9 @@
 "initial": "Hey 👋😀 .",
 "final": "Goodbye . Stay eco 👋😀 .",
 "quit": ["bye","goodbye","quit"],
-"pre": {"dont":["don't"],"cant":["can't"],"wont":["won't"],"recollect":["remember"],"dreamt":["dreamed"],"dreams":["dream"],"maybe":["perhaps"],"certainly":["yes"],"machine":["computer"],"computers":["computer"],"were":["was"],"same":["alike"],"has":["have"],"affect":["affecting"],"tree":["forest"],"trees":["forest"],"forests":["forest"],"destroy":["deforestation"],"destroying":["deforestation"],"cutting":["deforestation"],"people":["population"],"populace":["population"],"citizens":["population"],"citizenry":["population"],"natives":["population"],"society":["population"],"happening":["happen"],"increasing":["increase"],"increased":["increase"]},
+"pre": {"dont":["don't"],"cant":["can't"],"wont":["won't"],"recollect":["remember"],"dreamt":["dreamed"],"dreams":["dream"],"maybe":["perhaps"],"certainly":["yes"],"machine":["computer"],"computers":["computer"],"were":["was"],"same":["alike"],"has":["have"],"affect":["affecting"],"tree":["forest"],"trees":["forest"],"forests":["forest"],"destroy":["deforestation"],"destroying":["deforestation"],"cutting":["deforestation"],"people":["population"],"populace":["population"],"citizens":["population"],"citizenry":["populatio"],"natives":["population"],"society":["population"],"happening":["happen"],"increasing":["increase"],"increased":["increase"]},
 "post": {"am":["are"],"your":["my"],"me":["you"],"myself":["yourself"],"yourself":["myself"],"i":["you"],"you":["I"],"my":["your"],"i'm":["you're"]},
 "synon": {"animals":["animal","biodiversity"],"belief":["feel","think","believe","wish"],"family":["mother","mom","father","dad","sister","brother","wife","children","child"],"desire":["want","need"],"sad":["unhappy","depressed","sick"],"happy":["elated","glad","better"],"cannot":["can't"],"everyone":["everybody","nobody","noone"],"be":["am","is","are","was"]},
-"xnone":
-{
-    "*": ["I'm not sure I understand you fully .", "Please tell me something that i can understand !", "Please, tell me something about the nature !", "Do you feel strongly about discussing such things ?"]
-},
 "hello 5":
 {
     "*": ["Hi . What ecological problem are you interested in 👋😀 ?", "Hello, what would you like to now about ecology 😀 ?", "Hello, how can I help you make your life greener 😀 ?", "Hellow HackTues GG mentors 😏 !", "How do you do . Tell me what worry you !", "Hi . What seems to worry you ?", "Hi! Lets be eco !", "How are you today ?"]
@@ -191,5 +187,9 @@
 "always":
 {
     "*": ["Really, always ?", "Can you think of a specific example ?", "When ?", "What incident are you thinking of ?"]
+},
+"xnone":
+{
+    "*": ["I'm not sure I understand you fully .", "Please tell me something that i can understand !", "Please, tell me something about the nature !", "Do you feel strongly about discussing such things ?"]
 }
 }

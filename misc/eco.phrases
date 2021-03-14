@@ -28,7 +28,7 @@ pre: cutting deforestation
 pre: people population
 pre: populace population
 pre: citizens population
-pre: citizenry population
+pre: citizenry populatio
 pre: natives population
 pre: society population
 pre: happening happen
@@ -54,13 +54,6 @@ synon: happy elated glad better
 synon: cannot can't
 synon: everyone everybody nobody noone
 synon: be am is are was
-
-key: xnone
-    decomp: *
-        reasmb: I'm not sure I understand you fully .
-        reasmb: Please tell me something that i can understand !
-        reasmb: Please, tell me something about the nature !
-        reasmb: Do you feel strongly about discussing such things ?
 
 key: hello 5
 	decomp: *
@@ -465,3 +458,10 @@ key: always
         reasmb: Can you think of a specific example ?
         reasmb: When ?
         reasmb: What incident are you thinking of ?
+
+key: xnone
+    decomp: *
+        reasmb: I'm not sure I understand you fully .
+        reasmb: Please tell me something that i can understand !
+        reasmb: Please, tell me something about the nature !
+        reasmb: Do you feel strongly about discussing such things ?
