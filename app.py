@@ -20,30 +20,26 @@ def send_usr_message(data, methods=['GET', 'POST']):
 
 @socket.on('send_bot_message')
 def send_bot_message(message_said, language, methods=['GET', 'POST']):
-    print("entering message digestion")
     ret_val = verda_engine.only_text(message_said, language)
-    print("message digestion result: " + ret_val)
     socket.emit('print_bot_message', ret_val)
 
 
 @socket.on('bot_speech_api')
 def bot_speech_api(message_said, language, methods=['GET', 'POST']):
     ret_val = verda_engine.text_to_speech(message_said, language)
-    print(ret_val)
     socket.emit('print_bot_message', ret_val)
 
 
 @socket.on('usr_speech')
 def usr_speech(language, methods=['GET', 'POST']):
     ret_val = verda_engine.speech_to_text(language)
-    print(ret_val)
-    socket.emit('print_bot_message', ret_val)
+    socket.emit('print_usr_message', ret_val[0])
+    socket.emit('print_bot_message', ret_val[1])
 
 
 @socket.on('bot_speech_to_text_api')
 def bot_speech_to_text_api(language, methods=['GET', 'POST']):
     ret_val = verda_engine.speech_and_text_to_speech(language)
-    print(ret_val)
     socket.emit('print_bot_message', ret_val)
 
 
