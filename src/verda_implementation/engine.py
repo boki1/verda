@@ -19,7 +19,6 @@ class Globals(IntEnum):
 class VerdaEngine:
     def __init__(self):
         self.phrasing_memory = PhraseMemory.instance()
-
         self.context_memory = []
         self.decomposer = Decomposer(self.context_memory)
         self.reassembler = Reassembler()
@@ -83,11 +82,12 @@ class VerdaEngine:
         with sr.Microphone() as source:
             while True:
                 try:
+                    in_out = list()
                     print("> ")
                     recognizer.adjust_for_ambient_noise(source)
                     audio_file = recognizer.record(source, duration=5.0)
                     text = recognizer.recognize_google(language=language, audio_data=audio_file)
-                    print("Input: " + text)
+                    in_out.append(text)
 
                     text_en = translator.translate(text)
                     output = self.answer_to(text_en)
@@ -97,7 +97,8 @@ class VerdaEngine:
                         return None
                     engine.say(translator.translate(output, lang_tgt=language))
                     engine.runAndWait()
-                    return translator.translate(output, lang_tgt=language)
+                    in_out.append(translator.translate(output, lang_tgt=language))
+                    return in_out
                 except:
                     pass
 

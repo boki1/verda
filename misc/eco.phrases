@@ -67,12 +67,12 @@ key: hello 5
         reasmb: How are you today ?
 
 key: forest 10
-	decomp: what is * @forest *
+	decomp: what is * forest *
 		reasmb: A forest is an environment that is covered by trees .
 		reasmb: Forests consist of trees .
-	decomp: what * happen * @forest *
+	decomp: what * happen * forest *
 		reasmb: If we don’t act and the current rates of deforestation continue, the world’s rainforests will be gone in 100 years .
-	decomp: how many * @forest * destroyed *
+	decomp: how many * forest * destroyed *
 		reasmb: Since 2016, an average of 28 million hectares have been cut down every year .
 		reasmb: In 2016, a record of 29 .7 million hectares of forest disappeared .
 		reasmb: In just 40 years, a forest area the size of Europe has gone - 1 billion hectares .
