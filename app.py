@@ -35,17 +35,17 @@ def bot_speech_api(message_said, language, methods=['GET', 'POST']):
 
 @socket.on('usr_speech')
 def usr_speech(language, methods=['GET', 'POST']):
-    print(language)
-    ret_val = verda_engine.speech_to_text(language)
+    ret_val = verda_engine.speech_and_text_to_speech(language)
     socket.emit('print_usr_message', ret_val[0])
     socket.emit('print_bot_message', ret_val[1])
 
 
 @socket.on('bot_speech_to_text_api')
 def bot_speech_to_text_api(language, methods=['GET', 'POST']):
-    print(language)
     ret_val = verda_engine.speech_and_text_to_speech(language)
-    socket.emit('print_bot_message', ret_val)
+    ret_val = verda_engine.speech_to_text(language)
+    socket.emit('print_usr_message', ret_val[0])
+    socket.emit('print_bot_message', ret_val[1])
 
 
 if __name__ == '__main__':
