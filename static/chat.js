@@ -25,10 +25,12 @@ socket.on('connect', function() {
     const checkbox = $('#text-to-speech-checkbox');
 
     $("#activate-speech-recognition").click(function() {
-        if(checkbox.is(":checked")) {
-            socket.emit('bot_speech_to_text_api', $('head')[0].lang);
+        if (checkbox.is(":checked")) {
+            socket.emit('bot_speech_to_text_api', $('html')[0].lang)
+            console.log("Entered bot_speech_to_text_api mode");
         } else {
-            socket.emit('usr_speech', $('head')[0].lang)
+            socket.emit('usr_speech', $('html')[0].lang)
+            console.log("Entered usr_speech mode");
         }
     })
 
@@ -37,10 +39,14 @@ socket.on('connect', function() {
         let message = input.val().trim();
         if (message !== '') {
             socket.emit('send_usr_message', message)
+            console.log("Entered send_usr_message mode");
             if (checkbox.is(":checked")) {
-                socket.emit('bot_speech_api', message, $('head')[0].lang)
+                socket.emit('bot_speech_api', message, $('html')[0].lang)
+                console.log("Entered bot_speech_api mode");
             } else {
-                socket.emit('send_bot_message', message, $('head')[0].lang)
+                socket.emit('send_bot_message', message, $('html')[0].lang)
+                console.log("Entered send_bot_message mode");
+                console.log($('html')[0].lang);
             }
             input.val('').focus()
         }

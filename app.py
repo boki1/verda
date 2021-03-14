@@ -20,8 +20,9 @@ def send_usr_message(data, methods=['GET', 'POST']):
 
 @socket.on('send_bot_message')
 def send_bot_message(message_said, language, methods=['GET', 'POST']):
+    print("entering message digestion")
     ret_val = verda_engine.only_text(message_said, language)
-    print(ret_val)
+    print("message digestion result: " + ret_val)
     socket.emit('print_bot_message', ret_val)
 
 
