@@ -117,7 +117,7 @@ key: deforestation 10
 key: population 10
     decomp: what * happen * increase *
         reasmb: Too much increase in the world's population could be harmful.
-        reasmb: The world's population has increased greatly and it can have great effect on all human beings .
+        reasmb: The world population increase has great impact and effects on all human beings .
 
 key: alike 9
     decomp: *
