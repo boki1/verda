@@ -12,18 +12,13 @@ pre: recollect remember
 pre: dreamt dreamed
 pre: dreams dream
 pre: maybe perhaps
-pre: how what
-pre: when what
 pre: certainly yes
 pre: machine computer
 pre: computers computer
 pre: were was
-pre: you're you are
-pre: i'm i am
 pre: same alike
 pre: has have
 pre: affect affecting
-pre: happen happening
 pre: tree forest
 pre: trees forest
 pre: forests forest
@@ -36,7 +31,7 @@ pre: citizens population
 pre: citizenry population
 pre: natives population
 pre: society population
-pre: happen happening
+pre: happening happen
 pre: increasing increase
 pre: increased increase
 
@@ -75,7 +70,7 @@ key: hello 5
 		reasmb: Hellow HackTues GG mentors 😏 !
         reasmb: How do you do . Tell me what worry you !
         reasmb: Hi . What seems to worry you ?
-        reasmb: Lets be eco !
+        reasmb: Hi! Lets be eco !
         reasmb: How are you today ?
 
 key: forest 10
@@ -90,7 +85,7 @@ key: forest 10
 		reasmb: In just 40 years, a forest area the size of Europe has gone - 1 billion hectares .
 		reasmb: Half of the world’s rainforest has been destroyed in just one century .
 
-key: pollution
+key: pollution 10
     decomp: * can * help *
         reasmb: (2) can help to minimize the pollution by using recycled items.
         reasmb: (2) should not dispose your garbage in the nature.
@@ -106,12 +101,12 @@ key: deforestation 10
 		reasmb: Plant a tree 😀 .
 		reasmb: Do not overuse paper .
 	decomp: where *
-		reasmb: The Amazon forest is directly affected .
+		reasmb: The Amazon forest is affected greatly .
 		reasmb: In August of 2019, over 30 .000 individual fires in the Amazon . Three times the usual number .
     decomp: why * happen *
 		reasmb: Overuse of paper is one essential part .
 	decomp: why * bad *
-		reasmb: The loss of tree cover has a number of negative effects on the planet .
+		reasmb: The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc .
 		reasmb: Deforestation destroys wildlife habitat and is a key reason for animal extinction .
 		reasmb: The clearing of forests is a big contributor to global climate change .
 		reasmb: Trees are essential to the water cycle . In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments .
@@ -120,9 +115,9 @@ key: deforestation 10
 		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction .
 
 key: population 10
-    decomp: * has increased *
+    decomp: what * happen * increase *
         reasmb: Too much increase in the world's population could be harmful.
-        reasmb: The world's population has increased greatly .
+        reasmb: The world's population has increased greatly and it can have great effect on all human beings .
 
 key: alike 9
     decomp: *

@@ -28,12 +28,6 @@
     "maybe": [
       "perhaps"
     ],
-    "how": [
-      "what"
-    ],
-    "when": [
-      "what"
-    ],
     "certainly": [
       "yes"
     ],
@@ -46,14 +40,6 @@
     "were": [
       "was"
     ],
-    "you're": [
-      "you",
-      "are"
-    ],
-    "i'm": [
-      "i",
-      "am"
-    ],
     "same": [
       "alike"
     ],
@@ -62,9 +48,6 @@
     ],
     "affect": [
       "affecting"
-    ],
-    "happen": [
-      "happening"
     ],
     "tree": [
       "forest"
@@ -102,8 +85,14 @@
     "society": [
       "population"
     ],
-    "happen": [
-      "happening"
+    "happening": [
+      "happen"
+    ],
+    "increasing": [
+      "increase"
+    ],
+    "increased": [
+      "increase"
     ]
   },
   "post": {
@@ -221,33 +210,33 @@
       "Half of the world’s rainforest has been destroyed in just one century ."
     ]
   },
-  "pollution": {
+  "pollution 10": {
     "* can * help *": [
       "(2) can help to minimize the pollution by using recycled items.",
-      "(2) should not dispose your grabage in the nature.",
+      "(2) should not dispose your garbage in the nature.",
       "Garbage must be separated according to the material."
     ],
-    "* would happen * @increase": [
-      "(2) (3) the planet would not be safe to live on.",
-      "(2) (3) the planet is in great danger."
+    "* would happen * increase": [
+      "(2) the planet would not be safe to live on.",
+      "(2) the planet is in great danger."
     ]
   },
   "deforestation 10": {
     "* can * help *": [
       "(1) can help - buy forest-friendly products .",
-      "The trend of disappearing forests can be reversed ! Data suggests that replanting- and reforestation projects could do it within 30 years .",
+      "The trend of disappearing forests can be reversed ! Data suggests that replanting- and reforestation projects could do it within 31 years .",
       "Plant a tree 😀 .",
       "Do not overuse paper ."
     ],
     "where *": [
-      "The Amazon forest is directly affected .",
+      "The Amazon forest is affected greatly .",
       "In August of 2019, over 30 .000 individual fires in the Amazon . Three times the usual number ."
     ],
     "why * happen *": [
       "Overuse of paper is one essential part ."
     ],
     "why * bad *": [
-      "The loss of tree cover has a number of negative effects on the planet .",
+      "The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc .",
       "Deforestation destroys wildlife habitat and is a key reason for animal extinction .",
       "The clearing of forests is a big contributor to global climate change .",
       "Trees are essential to the water cycle . In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments .",
@@ -257,9 +246,9 @@
     ]
   },
   "population 10": {
-    "* has increased *": [
+    "what * happen * increase *": [
       "Too much increase in the world's population could be harmful.",
-      "The world's population has increased greatly ."
+      "The world's population has increased greatly and it can have great effect on all human beings ."
     ]
   },
   "alike 9": {

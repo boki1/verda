@@ -79,12 +79,12 @@ class Decomposer:
             raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts), msg=str(v_err))
 
         logging.debug(f'Decomposition results before post-substitution: {self.decomposition_result}')
-
         subs = dict(PhraseMemory.post_substitutors())
         self.decomposition_result = [Reassembler.replace(phrase, subs) for phrase in self.decomposition_result]
         logging.debug(f'Decomposition results after post-substitution: {self.decomposition_result}')
 
     def process_keywords(self, keystack: Keystack, sentence: str) -> str:
+        self.decomposition_result.clear()
         output = None
         for key in keystack:
             try:
@@ -114,7 +114,7 @@ class Decomposer:
             self.apply_decomposition_rule(rule, sentence)
             if not self.decomposition_result:
                 logging.debug(f'Decomposition did not match: {rule.parts}')
-                raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts))
+                continue
             else:
                 logging.debug(f'Decomposition successfully matched: {rule.parts} '
                               f'and gave results {self.decomposition_result}.')
@@ -135,4 +135,7 @@ class Decomposer:
                 logging.debug(f"Saved to memory: {output}")
                 continue
             return output
+
+        # TODO:
+        # raise DecompositionRuleNotFoundException(sentence, ' '.join(rule.parts))
         return ""

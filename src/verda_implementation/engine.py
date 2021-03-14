@@ -43,6 +43,7 @@ class VerdaEngine:
                 break
 
             answer = self.answer_to(inp)
+            answer = answer.capitalize()
             print(answer)
 
     def answer_to(self, question: str) -> str:
@@ -50,6 +51,11 @@ class VerdaEngine:
         sentence = sentence.lower()
         keywords = Keystack(sentence, shallow_copy(self.phrasing_memory))
         keywords = keywords.prioritize()
+
+        subs = dict(PhraseMemory.pre_substitutors())
+        words = sentence.split(' ')
+        words = Reassembler.replace(words, subs)
+        sentence = ' '.join(words)
 
         response = ""
 

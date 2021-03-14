@@ -10,7 +10,7 @@ __pycache__/
 *.so
 
 # Logs
-src/verda_implementation/output.log
+*.log
 
 # Distribution / packaging
 .Python

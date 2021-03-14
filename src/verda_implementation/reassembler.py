@@ -9,7 +9,7 @@ class Reassembler:
         output = list()
         for word in words:
             if word in subscribtors.keys():
-                output.append(subscribtors[word])
+                output.append(str(subscribtors[word]))
             else:
                 output.append(word)
         logging.debug(f"After replacement: {output}")
