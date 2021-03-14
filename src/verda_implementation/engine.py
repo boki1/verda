@@ -35,7 +35,7 @@ class VerdaEngine:
         logging.debug("After de-punctuation: '{filtered}'")
         return filtered
 
-    def convert_language(self, language, speech, text_to_speech, quits):
+    def convert_language(self, language, speech, text_to_speech, quits: list):
         if not speech and not text_to_speech:
             translator = google_translator()
             while True:
@@ -45,7 +45,7 @@ class VerdaEngine:
 
                 output = self.answer_to(text_en)
                 output = output.capitalize()
-                if text_en in quits:
+                if text_en[:(len(text_en)-1)].lower() in quits:
                     self.conversation_end()
                     return None
                 print(translator.translate(output, lang_tgt=language))
@@ -64,7 +64,7 @@ class VerdaEngine:
                         text_en = translator.translate(text)
                         output = self.answer_to(text_en)
                         output = output.capitalize()
-                        if text_en in quits:
+                        if text_en[:(len(text_en)-1)].lower() in quits:
                             self.conversation_end()
                             return None
                         print(translator.translate(output, lang_tgt=language))
@@ -90,7 +90,7 @@ class VerdaEngine:
 
                         text_en = translator.translate(text)
                         output = self.answer_to(text_en)
-                        if text_en in quits:
+                        if text_en[:(len(text_en)-1)].lower() in quits:
                             engine.say(translator.translate(self.conversation_end(), lang_tgt=language))
                             engine.runAndWait()
                             return None
@@ -111,30 +111,13 @@ class VerdaEngine:
 
                 output = self.answer_to(text_en)
                 output = output.capitalize()
-                if text_en in quits:
+                if text_en[:(len(text_en)-1)].lower() in quits:
                     engine.say(translator.translate(self.conversation_end(), lang_tgt=language))
                     engine.runAndWait()
                     return None
                 engine.say(translator.translate(output, lang_tgt=language))
                 engine.runAndWait()
                 print(translator.translate(output, lang_tgt=language))
-
-    # def run(self):
-    #     print(self.initial())
-    #     language = input("Enter language (bg / en / ru / de): ")
-    #     speech = input("Do you want to speak to Verda (y / n): ")
-    #     if speech == 'y':
-    #         speech = True
-    #     else:
-    #         speech = False
-    #     text_to_speech = input("Do you want Verda to speak (y / n): ")
-    #     if text_to_speech == 'y':
-    #         text_to_speech = True
-    #     else:
-    #         text_to_speech = False
-    #
-    #     self.convert_language(language, speech, text_to_speech)
-    #     print(self.final())
 
     def loop(self):
         if not self.done_greetings[Globals.HELLO_IDX]:
