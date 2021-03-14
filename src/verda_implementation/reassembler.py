@@ -1,5 +1,5 @@
 import logging
-from components import ReassemblyRuleNotFoundException
+from .components import ReassemblyRuleNotFoundException
 from random import choice as random_choice
 
 

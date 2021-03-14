@@ -1,11 +1,11 @@
 import logging
 from random import choice as random_choice
 from random import randrange as random_randrange
-from components import DecompositionRule, Keyword
-from components import ReassemblyRuleNotFoundException, DecompositionRuleNotFoundException, \
+from .components import DecompositionRule, Keyword
+from .components import ReassemblyRuleNotFoundException, DecompositionRuleNotFoundException, \
     KeywordProcessingFailedException
-from memory import PhraseMemory, Keystack
-from reassembler import Reassembler
+from .memory import PhraseMemory, Keystack
+from .reassembler import Reassembler
 
 
 class Decomposer:

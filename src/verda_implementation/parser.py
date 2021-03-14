@@ -1,4 +1,4 @@
-from components import Keyword, DecompositionRule, FileParseType
+from .components import Keyword, DecompositionRule, FileParseType
 import json
 
 

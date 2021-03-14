@@ -1,5 +1,5 @@
 import logging
-from engine import VerdaEngine
+from .engine import VerdaEngine
 
 
 def setup_logging():

@@ -1,5 +1,5 @@
-from parser import PhraseParser
-from components import DecompositionRule, Keyword
+from .parser import PhraseParser
+from .components import DecompositionRule, Keyword
 import logging
 
 
@@ -12,7 +12,7 @@ class PhraseMemory:
     MATCH_SYNONYM = '@'
 
     @classmethod
-    def instance(cls, filename: str = "../../misc/eco_phrases.json"):
+    def instance(cls, filename: str = "misc/eco_phrases.json"):
         if PhraseMemory.__instance:
             return PhraseMemory.__instance
         cls.phrases = PhraseParser(filename)

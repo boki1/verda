@@ -1,9 +1,11 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO
+from src.verda_implementation.engine import VerdaEngine
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 socket = SocketIO(app)
+verda_enging = VerdaEngine()
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -20,17 +22,17 @@ def send_usr_message(data, methods=['GET', 'POST']):
 def send_bot_message(data, methods=['GET', 'POST']):
     socket.emit('print_bot_message', data)  
 
+
 @socket.on('bot_speech_api')
 def bot_speech_api(message_to_say, methods=['GET', 'POST']):
-    # here we should call the speech function with argument the message
+    ret = verda_enging.text_to_speech(message_to_say)
     pass
+
 
 @socket.on('bot_speech_to_text_api')
 def bot_speech_to_text_api(methods=['GET', 'POST']):
-    #here we should call the speech recognition method and bot text digestion
+    ret = verda_enging.speech_and_text_to_speech()
     socket.emit('bot_digestion')
-
-
 
 
 if __name__ == '__main__':
