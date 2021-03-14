@@ -126,7 +126,6 @@ class Decomposer:
                 return self.parse_goto(reassembly_rule[1], sentence)
 
             try:
-                # print(reassembly_rule)
                 output = Reassembler.reassemble(" ".join(reassembly_rule), self.decomposition_result)
             except ReassemblyRuleNotFoundException:
                 raise
