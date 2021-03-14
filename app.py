@@ -48,4 +48,4 @@ def bot_speech_to_text_api(language, methods=['GET', 'POST']):
 
 
 if __name__ == '__main__':
-    socket.run(app, debug=True)
+    socket.run(app, debug=False)
