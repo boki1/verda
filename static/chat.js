@@ -27,9 +27,11 @@ socket.on('connect', function() {
     $("#activate-speech-recognition").click(function() {
         if (checkbox.is(":checked")) {
             socket.emit('bot_speech_to_text_api', $('html')[0].lang)
+            alert("speak now")
             console.log("Entered bot_speech_to_text_api mode");
         } else {
             socket.emit('usr_speech', $('html')[0].lang)
+            alert("speak now")
             console.log("Entered usr_speech mode");
         }
     })
