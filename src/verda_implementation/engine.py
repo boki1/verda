@@ -38,8 +38,8 @@ class VerdaEngine:
     def only_text(self, text: str, language: str):
         translator = google_translator()
         while True:
-            text_en = translator.translate(text, lang_tgt=language)
-
+            text_en = translator.translate(text)
+            print(text_en)
             output = self.answer_to(text_en)
             output = output.capitalize()
             if text_en[:(len(text_en) - 1)].lower() in self.quits:
