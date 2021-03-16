@@ -93,6 +93,8 @@ class Decomposer:
                 e = f"{str(val_err)} Keyword processing failed."
                 logging.exception(e)
                 raise KeywordProcessingFailedException(key, keystack, e)
+            except ReassemblyRuleNotFoundException:
+                raise
 
             if output:
                 logging.debug(f"Output from key: {output}")

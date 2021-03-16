@@ -68,7 +68,7 @@ class VerdaEngine:
                     if text_en[:(len(text_en) - 1)].lower() in self.quits:
                         self.conversation_end()
                         return None
-                    
+
                     in_out.append(translator.translate(output, lang_tgt=language))
                     return in_out
                 except:
@@ -172,7 +172,7 @@ class VerdaEngine:
 
         try:
             response: str = self.decomposer.process_keywords(keywords, sentence)
-        except ReassemblyRuleNotFoundException as r_err: 
+        except ReassemblyRuleNotFoundException as r_err:
             logging.exception(r_err.msg)
         except DecompositionRuleNotFoundException as d_err:
             logging.exception(d_err.msg)
