@@ -1,0 +1,6 @@
+Flask>=1.1.2
+Flask-SocketIO<5
+google_trans_new>=3.1.0a0
+pyttsx3>=2.90
+SpeechRecognition>3.8.0
+PyAudio>=0.2.11

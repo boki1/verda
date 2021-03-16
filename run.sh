@@ -1,6 +1,7 @@
 pushd .
 
-cd src/verda_implementation/
-python3 main.py
+# pip install -r misc/requirements.txt
+export FLASK_APP=app.py
+flask run
 
 popd
