@@ -12,7 +12,7 @@ class PhraseMemory:
     MATCH_SYNONYM = '@'
 
     @classmethod
-    def instance(cls, filename: str = "misc/eco_phrases.json"):
+    def instance(cls, filename: str = "misc/eco.phrases"):
         if PhraseMemory.__instance:
             return PhraseMemory.__instance
         cls.phrases = PhraseParser(filename)

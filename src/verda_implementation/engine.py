@@ -38,15 +38,14 @@ class VerdaEngine:
     def only_text(self, text: str, language: str):
         translator = google_translator()
         while True:
-            text_en = translator.translate(text)
-            logging.debug('The Translated Text to english is: %s', text_en)
+            text_en = translator.translate(text, lang_tgt=language)
 
             output = self.answer_to(text_en)
             output = output.capitalize()
             if text_en[:(len(text_en) - 1)].lower() in self.quits:
                 self.conversation_end()
                 return None
-            return translator.translate(output, lang_tgt=language)
+            return output
 
     def speech_to_text(self, language: str):
         translator = google_translator()
@@ -55,12 +54,10 @@ class VerdaEngine:
             while True:
                 try:
                     in_out = list()
-                    print("> ")
                     recognizer.adjust_for_ambient_noise(source)
                     audio_file = recognizer.record(source, duration=5.0)
                     text = recognizer.recognize_google(language=language, audio_data=audio_file)
                     in_out.append(text)
-                    print("Input: " + text)
 
                     text_en = translator.translate(text)
                     output = self.answer_to(text_en)
@@ -69,7 +66,7 @@ class VerdaEngine:
                         self.conversation_end()
                         return None
 
-                    in_out.append(translator.translate(output, lang_tgt=language))
+                    in_out.append(output)
                     return in_out
                 except:
                     pass
@@ -87,7 +84,6 @@ class VerdaEngine:
             while True:
                 try:
                     in_out = list()
-                    print("> ")
                     recognizer.adjust_for_ambient_noise(source)
                     audio_file = recognizer.record(source, duration=5.0)
                     text = recognizer.recognize_google(language=language, audio_data=audio_file)
@@ -101,7 +97,7 @@ class VerdaEngine:
                         return None
                     engine.say(translator.translate(output, lang_tgt=language))
                     engine.runAndWait()
-                    in_out.append(translator.translate(output, lang_tgt=language))
+                    in_out.append(output)
                     return in_out
                 except:
                     pass
@@ -114,7 +110,6 @@ class VerdaEngine:
         engine.setProperty('voice', voices[2].id)
         while True:
             text_en = translator.translate(text)
-            print(f"The Translated Text is: {text_en}")
 
             output = self.answer_to(text_en)
             output = output.capitalize()
@@ -124,7 +119,7 @@ class VerdaEngine:
                 return None
             engine.say(translator.translate(output, lang_tgt=language))
             engine.runAndWait()
-            return translator.translate(output, lang_tgt=language)
+            return output
 
     def loop(self):
         if not self.done_greetings[Globals.HELLO_IDX]:

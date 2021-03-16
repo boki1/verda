@@ -1,3 +1,4 @@
+from misc.eco_phrases_to_json import Converter
 from .components import Keyword, DecompositionRule, FileParseType
 import json
 
@@ -73,7 +74,8 @@ Keys: {self.keys}"
                     decomposition.reassembly_rules.append(words)
 
     def get_from_file_json(self, path):
-        with open(path) as f:
+        Converter(path)
+        with open("misc/eco_phrases.json") as f:
             data = json.load(f)
         specials = {'pre': list(), 'post': list(), 'synon': list()}
         for tag in data:
