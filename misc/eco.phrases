@@ -89,12 +89,12 @@ synon: be am is are was
 key: hello 5
 	decomp: *
 		reasmb: Hi . What ecological problem are you interested in 👋😀 ?
-		reasmb: Hello, what would you like to now about ecology 😀 ?
+		reasmb: Hello, what would you like to know about ecology 😀 ?
 		reasmb: Hello, how can I help you make your life greener 😀 ?
-		reasmb: Hellow HackTues GG mentors 😏 !
+		reasmb: Hello HackTues GG mentors 😏 !
         reasmb: How do you do . Tell me what worry you !
         reasmb: Hi . What seems to worry you ?
-        reasmb: Hi! Lets be eco !
+        reasmb: Hi ! Lets be eco !
         reasmb: How are you today ?
 
 key: forest 10
