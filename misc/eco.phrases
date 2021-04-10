@@ -28,7 +28,7 @@ pre: cutting deforestation
 pre: people population
 pre: populace population
 pre: citizens population
-pre: citizenry populatio
+pre: citizenry population
 pre: natives population
 pre: society population
 pre: happening happen
@@ -111,12 +111,12 @@ key: forest 10
 
 key: pollution 10
     decomp: * can * help *
-        reasmb: (2) can help to minimize the pollution by using recycled items.
-        reasmb: (2) should not dispose your garbage in the nature.
-        reasmb: Garbage must be separated according to the material.
+        reasmb: (2) can help to minimize the pollution by using recycled items .
+        reasmb: (2) should not dispose your garbage in the nature .
+        reasmb: Garbage must be separated according to the material .
     decomp: * would happen * increase
-        reasmb: (2) the planet would not be safe to live on.
-        reasmb: (2) the planet is in great danger.
+        reasmb: (2) the planet would not be safe to live on .
+        reasmb: (2) the planet is in great danger .
 
 key: deforestation 10
 	decomp: * can * help *
@@ -140,7 +140,7 @@ key: deforestation 10
 
 key: population 10
     decomp: what * happen * increase *
-        reasmb: Too much increase in the world's population could be harmful.
+        reasmb: Too much increase in the world's population could be harmful .
         reasmb: The world population increase has great impact and effects on all human beings .
 
 key: alike 9
@@ -193,17 +193,17 @@ key: computers 7
 
 y: remember 6
     decomp: * i remember *
-        reasmb: Do you often think of (2)  ?
-        reasmb: Does thinking of (2) bring anything else to mind  ?
-        reasmb: What else do you recollect  ?
-        reasmb: Why do you recollect (2) just now  ?
-        reasmb: What in the present situation reminds you of (2)  ?
-        reasmb: What is the connection between me and (2)  ?
+        reasmb: Do you often think of (2) ?
+        reasmb: Does thinking of (2) bring anything else to mind ?
+        reasmb: What else do you recollect ?
+        reasmb: Why do you recollect (2) just now ?
+        reasmb: What in the present situation reminds you of (2) ?
+        reasmb: What is the connection between me and (2) ?
   decomp: * do you remember *
-        reasmb: You mentioned (2)  ?
-        reasmb: Did you think I would forget (2)  ?
-        reasmb: Why do you think I should recall (2) now  ?
-        reasmb: What about (2)  ?
+        reasmb: You mentioned (2) ?
+        reasmb: Did you think I would forget (2) ?
+        reasmb: Why do you think I should recall (2) now ?
+        reasmb: What about (2) ?
         reasmb: goto what
 
 key: i 5
@@ -265,17 +265,17 @@ key: i 5
 
 key: dream 4
     decomp: *
-        reasmb: Do you believe that dreams have something to do with your problems  ?
-        reasmb: What does that dream suggest to you  ?
-        reasmb: Do you dream often  ?
-        reasmb: What persons appear in your dreams  ?
+        reasmb: Do you believe that dreams have something to do with your problems ?
+        reasmb: What does that dream suggest to you ?
+        reasmb: Do you dream often ?
+        reasmb: What persons appear in your dreams ?
 
 key: if 4
     decomp: * if *
-        reasmb: Really, if (2)  ?
-        reasmb: Do you think its likely that (2)  ?
-        reasmb: Do you wish that (2)  ?
-        reasmb: What do you know about (2)  ?
+        reasmb: Really, if (2) ?
+        reasmb: Do you think its likely that (2) ?
+        reasmb: Do you wish that (2) ?
+        reasmb: What do you know about (2) ?
 
 key: everybody 3
     decomp: *
@@ -318,7 +318,7 @@ key: was 3
         reasmb: Would you like to believe I was (2) ?
         reasmb: What suggests that I was (2) ?
         reasmb: What do you think ?
-        reasmb: Perhaps I was (2) ..
+        reasmb: Perhaps I was (2) . .
 
 key: sorry 2
     decomp: *
@@ -332,9 +332,9 @@ key: apologise 2
 
 key: dreamed 2
     decomp: * i dreamed *
-        reasmb: Have you ever dreamed (2) before  ?
-        reasmb: Really, (2)  ?
-        reasmb: Have you ever fantasized (2) while you were awake  ?
+        reasmb: Have you ever dreamed (2) before ?
+        reasmb: Really, (2) ?
+        reasmb: Have you ever fantasized (2) while you were awake ?
         reasmb: goto dream
 
 key: am 2
