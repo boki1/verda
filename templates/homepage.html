@@ -179,20 +179,21 @@
                 <p class="author">- Sidney Sheldon</p>
             </div>
         </div>
-        <button id="btnVerda" type="button" class="btn btn-secondary">Press here to toggle chat with Verda</button>
+        <button id="btnVerda" type="button" class="btn btn-secondary" style="margin-bottom: 15px;">Press here to toggle chat with Verda</button>
         <div id="chat_and_message" class="col-auto" style="display: none;">
             <div id="chat">
-                <div id="chatContent">
-
-                </div>
             </div>
             <form id="message" method="POST">
-                <label><input type="checkbox" id="text-to-speech-checkbox"> Text to speech</label><br>
-                <label>Message:
-                    <input type="text" class="message"/>
-                </label>
-                <input type="submit" value="Send" /><br>
-                <input type="button" id="activate-speech-recognition" value="Speech to text" />
+                <div class="formcontainer">
+                    <div class="container">
+                        <input type="text" placeholder="Write your question here" name="message" class="message" style="width: 100%; height: 40px; margin-top: 5px;">
+                    </div>
+                    <div class="container">
+                        <button type="submit" style="background-color: #8ebf42; color: white; padding: 14px 0; margin: 10px 0; border: none; cursor: grabbing; width: 50%;">Send</button>
+                        <label style="padding-left: 15px; padding-right: 15px;"><input type="checkbox" id="text-to-speech-checkbox"> Text to speech</label>
+                        <input type="button" id="activate-speech-recognition" value="Speech to text"/>
+                    </div>
+                </div>
             </form>
 
         </div>

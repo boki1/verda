@@ -39,11 +39,12 @@ socket.on('connect', function() {
     $("#activate-speech-recognition").click(function() {
         if (checkbox.is(":checked")) {
             socket.emit('bot_speech_to_text_api', $('html')[0].lang)
-            alert("speak now")
+            setTimeout(function() { alert("Speak Now"); }, 1000);
+            
             console.log("Entered bot_speech_to_text_api mode");
         } else {
             socket.emit('usr_speech', $('html')[0].lang)
-            alert("speak now")
+            setTimeout(function() { alert("Speak Now"); }, 1000);
             console.log("Entered usr_speech mode");
         }
     })
@@ -69,10 +70,15 @@ socket.on('connect', function() {
 
 socket.on('print_bot_message', function(message) {
     const chat = $('div#chat');
-    chat.append('<br><br><br>' + '<div class="botMessage"><p>' + message + '</p></div>')
+    chat.append('<br><br><br>' + '<div class="botMessage" style="padding-left: 10px"><p >' + message + '</p></div>')
+    let height = document.getElementById("chat");
+    height.scrollTop = height.scrollHeight;
 })
 
 socket.on('print_usr_message', function(message) {
     const chat = $('div#chat');
-    chat.append('<br><br><br>' + '<div class="usrMessage"><p>' + message + '</p></div>')
+    chat.append('<br><br><br>' + '<div class="usrMessage" style="padding-right: 10px"><p>' + message + '</p></div>')
+    $('#chat').scrollTop = $('#chat').scrollHeight;
+    let height = document.getElementById("chat");
+    height.scrollTop = height.scrollHeight;
 })

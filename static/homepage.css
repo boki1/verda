@@ -94,7 +94,7 @@ body {
     height: 500px;
     width: 500;
     overflow: auto;
-    background-color: white;
+    background-color: rgb(248, 235, 219);
     border-radius: 20px;
     opacity: 0.9;
     position: relative;
