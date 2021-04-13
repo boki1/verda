@@ -2,12 +2,12 @@
 "initial": "Hey 👋😀 .",
 "final": "Goodbye . Stay eco 👋😀 .",
 "quit": ["bye","goodbye","quit"],
-"pre": {"dont":["don't"],"cant":["can't"],"wont":["won't"],"recollect":["remember"],"dreamt":["dreamed"],"dreams":["dream"],"maybe":["perhaps"],"certainly":["yes"],"machine":["computer"],"computers":["computer"],"were":["was"],"same":["alike"],"has":["have"],"affect":["affecting"],"tree":["forest"],"trees":["forest"],"forests":["forest"],"destroy":["deforestation"],"destroying":["deforestation"],"cutting":["deforestation"],"people":["population"],"populace":["population"],"citizens":["population"],"citizenry":["population"],"natives":["population"],"society":["population"],"happening":["happen"],"increasing":["increase"],"increased":["increase"],"animal":["animals"],"biodiversity":["animals"],"feel":["belief"],"think":["belief"],"believe":["belief"],"wish":["belief"],"mother":["family"],"mom":["family"],"father":["family"],"dad":["family"],"sister":["family"],"brother":["family"],"wife":["family"],"children":["family"],"child":["family"],"want":["desire"],"need":["desire"],"unhappy":["sad"],"depressed":["sad"],"sick":["sad"],"elated":["happy"],"glad":["happy"],"better":["happy"],"can't":["cannot"],"everybody":["everyone"],"nobody":["everyone"],"noone":["everyone"],"am":["be"],"is":["be"],"are":["be"],"was":["be"]},
+"pre": {"dont":["don't"],"cant":["can't"],"wont":["won't"],"recollect":["remember"],"dreamt":["dreamed"],"dreams":["dream"],"maybe":["perhaps"],"certainly":["yes"],"machine":["computer"],"computers":["computer"],"were":["was"],"same":["alike"],"has":["have"],"affect":["affecting"],"tree":["forest"],"trees":["forest"],"forests":["forest"],"destroy":["deforestation"],"cutting":["deforestation"],"people":["population"],"populace":["population"],"citizens":["population"],"citizenry":["population"],"natives":["population"],"society":["population"],"happening":["happen"],"increasing":["increase"],"increased":["increase"],"animal":["animals"],"biodiversity":["animals"],"feel":["belief"],"think":["belief"],"believe":["belief"],"wish":["belief"],"mother":["family"],"mom":["family"],"father":["family"],"dad":["family"],"sister":["family"],"brother":["family"],"wife":["family"],"children":["family"],"child":["family"],"want":["desire"],"need":["desire"],"unhappy":["sad"],"depressed":["sad"],"sick":["sad"],"elated":["happy"],"glad":["happy"],"better":["happy"],"can't":["cannot"],"everybody":["everyone"],"nobody":["everyone"],"noone":["everyone"],"am":["be"],"is":["be"],"are":["be"],"was":["be"]},
 "post": {"am":["are"],"your":["my"],"me":["you"],"myself":["yourself"],"yourself":["myself"],"i":["you"],"you":["I"],"my":["your"],"i'm":["you're"]},
 "synon": {"animals":["animal","biodiversity"],"belief":["feel","think","believe","wish"],"family":["mother","mom","father","dad","sister","brother","wife","children","child"],"desire":["want","need"],"sad":["unhappy","depressed","sick"],"happy":["elated","glad","better"],"cannot":["can't"],"everyone":["everybody","nobody","noone"],"be":["am","is","are","was"]},
 "hello 5":
 {
-    "*": ["Hi . What ecological problem are you interested in 👋😀 ?", "Hello, what would you like to know about ecology 😀 ?", "Hello, how can I help you make your life greener 😀 ?", "Hello HackTues GG mentors 😏 !", "How do you do . Tell me what worry you !", "Hi . What seems to worry you ?", "Hi ! Lets be eco !", "How are you today ?"]
+    "*": ["Hi . What ecological problem are you interested in 👋😀 ?", "Hello, what would you like to know about ecology 😀 ?", "Hello, how can I help you make your life greener 😀 ?", "Hello !", "How do you do . Tell me what worry you !", "Hi . What seems to worry you ?", "Hi ! Lets be eco !", "How are you today ?"]
 },
 "forest 10":
 {
@@ -23,9 +23,13 @@
 "deforestation 10":
 {
     "* can * help *": ["(1) can help - buy forest-friendly products .", "The trend of disappearing forests can be reversed ! Data suggests that replanting- and reforestation projects could do it within 31 years .", "Plant a tree 😀 .", "Do not overuse paper ."],
-    "where *": ["The Amazon forest is affected greatly .", "In August of 2019, over 30 .000 individual fires in the Amazon . Three times the usual number ."],
+    "where *": ["The Amazon forest is affected greatly .", "In August of 2019, over 30.000 individual fires in the Amazon - three times the usual number ."],
     "why * happen *": ["Overuse of paper is one essential part ."],
     "why * bad *": ["The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc .", "Deforestation destroys wildlife habitat and is a key reason for animal extinction .", "The clearing of forests is a big contributor to global climate change .", "Trees are essential to the water cycle . In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments .", "Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil .", "If soil erosion is not stopped it can ultimately turn the land into desert .", "In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction ."]
+},
+"destroying 10":
+{
+    "*": ["goto deforestation"]
 },
 "population 10":
 {

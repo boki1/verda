@@ -23,7 +23,6 @@ pre: tree forest
 pre: trees forest
 pre: forests forest
 pre: destroy deforestation
-pre: destroying deforestation
 pre: cutting deforestation
 pre: people population
 pre: populace population
@@ -91,7 +90,7 @@ key: hello 5
 		reasmb: Hi . What ecological problem are you interested in 👋😀 ?
 		reasmb: Hello, what would you like to know about ecology 😀 ?
 		reasmb: Hello, how can I help you make your life greener 😀 ?
-		reasmb: Hello HackTues GG mentors 😏 !
+		reasmb: Hello !
         reasmb: How do you do . Tell me what worry you !
         reasmb: Hi . What seems to worry you ?
         reasmb: Hi ! Lets be eco !
@@ -126,7 +125,7 @@ key: deforestation 10
 		reasmb: Do not overuse paper .
 	decomp: where *
 		reasmb: The Amazon forest is affected greatly .
-		reasmb: In August of 2019, over 30 .000 individual fires in the Amazon . Three times the usual number .
+		reasmb: In August of 2019, over 30.000 individual fires in the Amazon - three times the usual number .
     decomp: why * happen *
 		reasmb: Overuse of paper is one essential part .
 	decomp: why * bad *
@@ -137,6 +136,10 @@ key: deforestation 10
 		reasmb: Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil .
 		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert .
 		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction .
+
+key: destroying 10
+    decomp: *
+        reasmb: goto deforestation
 
 key: population 10
     decomp: what * happen * increase *
