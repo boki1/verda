@@ -210,6 +210,13 @@ y: remember 6
         reasmb: What about (2) ?
         reasmb: goto what
 
+key: dream 5
+    decomp: *
+        reasmb: Do you believe that dreams have something to do with your problems ?
+        reasmb: What does that dream suggest to you ?
+        reasmb: Do you dream often ?
+        reasmb: What persons appear in your dreams ?
+
 key: i 5
     decomp: * i desire *
         reasmb: What does (3) have to do with this discussion ?
@@ -266,13 +273,6 @@ key: i 5
         reasmb: You say (1) ?
         reasmb: Can you elaborate on that ?
         reasmb: Do you say (1) for some special reason ?
-
-key: dream 4
-    decomp: *
-        reasmb: Do you believe that dreams have something to do with your problems ?
-        reasmb: What does that dream suggest to you ?
-        reasmb: Do you dream often ?
-        reasmb: What persons appear in your dreams ?
 
 key: if 4
     decomp: * if *
