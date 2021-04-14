@@ -19,51 +19,9 @@ pre: were was
 pre: same alike
 pre: has have
 pre: affect affecting
-pre: tree forest
-pre: trees forest
-pre: forests forest
-pre: destroy deforestation
-pre: cutting deforestation
-pre: people population
-pre: populace population
-pre: citizens population
-pre: citizenry population
-pre: natives population
-pre: society population
 pre: happening happen
 pre: increasing increase
 pre: increased increase
-pre: animal animals
-pre: biodiversity animals
-pre: feel belief
-pre: think belief
-pre: believe belief
-pre: wish belief
-pre: mother family
-pre: mom family
-pre: father family
-pre: dad family
-pre: sister family
-pre: brother family
-pre: wife family
-pre: children family
-pre: child family
-pre: want desire
-pre: need desire
-pre: unhappy sad
-pre: depressed sad
-pre: sick sad
-pre: elated happy
-pre: glad happy
-pre: better happy
-pre: can't cannot
-pre: everybody everyone
-pre: nobody everyone
-pre: noone everyone
-pre: am be
-pre: is be
-pre: are be
-pre: was be
 
 post: am are
 post: your my
@@ -108,6 +66,18 @@ key: forest 10
 		reasmb: In just 40 years, a forest area the size of Europe has gone - 1 billion hectares .
 		reasmb: Half of the world’s rainforest has been destroyed in just one century .
 
+key: tree 10
+    decomp: *
+        reasmb: goto forest
+
+key: trees 10
+    decomp: *
+        reasmb: goto forest
+
+key: forests 10
+    decomp: *
+        reasmb: goto forest
+
 key: pollution 10
     decomp: * can * help *
         reasmb: (2) can help to minimize the pollution by using recycled items .
@@ -137,6 +107,13 @@ key: deforestation 10
 		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert .
 		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction .
 
+key: cutting 10
+    decomp: *
+        reasmb: goto deforestation
+
+key: destroy 10
+    decomp: *
+        reasmb: goto deforestation
 key: destroying 10
     decomp: *
         reasmb: goto deforestation
@@ -145,6 +122,30 @@ key: population 10
     decomp: what * happen * increase *
         reasmb: Too much increase in the world's population could be harmful .
         reasmb: The world population increase has great impact and effects on all human beings .
+
+key: people 10
+    decomp: *
+        reasmb: goto population
+
+key: populace 10
+    decomp: *
+        reasmb: goto population
+
+key: citizens 10
+    decomp: *
+        reasmb: goto population
+
+key: citizenry 10
+    decomp: *
+        reasmb: goto population
+
+key: natives 10
+    decomp: *
+        reasmb: goto population
+
+key: society 10
+    decomp: *
+        reasmb: goto population
 
 key: alike 9
     decomp: *
