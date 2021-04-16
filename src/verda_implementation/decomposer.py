@@ -21,7 +21,7 @@ class Decomposer:
             raise ValueError(f"Unknown synonym root {root}")
         if words[0].lower() not in PhraseMemory.synonyms()[root]:
             return False
-        # TODO:
+
         return self.decompose(expression_parts[1:], words[1:])
 
     def parse_asterisk(self, sentence: str, expression_parts: list) -> bool:

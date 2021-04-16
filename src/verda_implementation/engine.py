@@ -126,16 +126,8 @@ class VerdaEngine:
             self.conversation_begin()
 
         language = input("Enter language (bg / en / ru / de): ")
-        speech = input("Do you want to speak to Verda (y / n): ")
-        if speech == 'y':
-            speech = True
-        else:
-            speech = False
-        text_to_speech = input("Do you want Verda to speak (y / n): ")
-        if text_to_speech == 'y':
-            text_to_speech = True
-        else:
-            text_to_speech = False
+        speech = input("Do you want to speak to Verda (y / n): ") == 'y'
+        text_to_speech = input("Do you want Verda to speak (y / n): ") == 'y'
 
         quits = list()
         for i in PhraseMemory.goodbye_messages():
@@ -163,18 +155,13 @@ class VerdaEngine:
         words = Reassembler.replace(words, subs)
         sentence = ' '.join(words)
 
-        response = ""
-
         try:
             response: str = self.decomposer.process_keywords(keywords, sentence)
-        except ReassemblyRuleNotFoundException as r_err:
-            logging.exception(r_err.msg)
-        except DecompositionRuleNotFoundException as d_err:
-            logging.exception(d_err.msg)
-        except KeywordProcessingFailedException as k_err:
-            logging.exception(k_err.msg)
+            return response
+        except Exception:
+            pass
+        return ""
 
-        return response
 
     def conversation_begin(self):
         print(PhraseMemory.hello_greeting())
