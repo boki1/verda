@@ -1,5 +1,5 @@
-initial: Hey 👋😀 .
-final: Goodbye . Stay eco 👋😀 .
+initial: Hey 👋😀.
+final: Goodbye. Stay eco 👋😀.
 
 quit: bye
 quit: goodbye
@@ -43,28 +43,45 @@ synon: cannot can't
 synon: everyone everybody nobody noone
 synon: be am is are was
 
+key: name 15
+    decomp: * is your *
+        reasmb: My name is Verda.
+    decomp: *
+        reasmb: Names are not my specialty.
+        reasmb: Let's talk about something else.
+        reasmb: I've told you before, I don't care about names -- please continue.
+        reasmb: I am not interested in names
+
 key: hello 5
 	decomp: *
-		reasmb: Hi . What ecological problem are you interested in 👋😀 ?
-		reasmb: Hello, what would you like to know about ecology 😀 ?
-		reasmb: Hello, how can I help you make your life greener 😀 ?
-		reasmb: Hello !
-        reasmb: How do you do . Tell me what worry you !
-        reasmb: Hi . What seems to worry you ?
-        reasmb: Hi ! Lets be eco !
-        reasmb: How are you today ?
+		reasmb: Hi. What ecological problem are you interested in 👋😀?
+		reasmb: Hello, what would you like to know about ecology 😀?
+		reasmb: Hello, how can I help you make your life greener 😀?
+		reasmb: Hello!
+        reasmb: How do you do. Tell me what worry you!
+        reasmb: Hi. What seems to worry you?
+        reasmb: Hi! Lets be eco!
+        reasmb: How are you today?
+
+key: hi 5
+    decomp: *
+        reasmb: goto hello
+
+key: greetings
+    decomp: *
+        reasmb: goto hello
 
 key: forest 10
 	decomp: what is * forest *
-		reasmb: A forest is an environment that is covered by trees .
-		reasmb: Forests consist of trees .
+		reasmb: A forest is an environment that is covered by trees.
+		reasmb: Forests consist of trees.
 	decomp: what * happen * forest *
-		reasmb: If we don’t act and the current rates of deforestation continue, the world’s rainforests will be gone in 100 years .
+		reasmb: If we don’t act and the current rates of deforestation continue, the world’s rainforests will be gone in 100 years.
 	decomp: how many * forest * destroyed *
-		reasmb: Since 2016, an average of 28 million hectares have been cut down every year .
-		reasmb: In 2016, a record of 29 .7 million hectares of forest disappeared .
-		reasmb: In just 40 years, a forest area the size of Europe has gone - 1 billion hectares .
-		reasmb: Half of the world’s rainforest has been destroyed in just one century .
+		reasmb: Since 2016, an average of 28 million hectares have been cut down every year.
+		reasmb: In 2016, a record of 29.7 million hectares of forest disappeared.
+		reasmb: In just 40 years, a forest area the size of Europe has gone - 1 billion hectares.
+		reasmb: Half of the world’s rainforest has been destroyed in just one century.
 
 key: tree 10
     decomp: *
@@ -80,32 +97,32 @@ key: forests 10
 
 key: pollution 10
     decomp: * can * help *
-        reasmb: (2) can help to minimize the pollution by using recycled items .
-        reasmb: (2) should not dispose your garbage in the nature .
-        reasmb: Garbage must be separated according to the material .
+        reasmb: (2) can help to minimize the pollution by using recycled items.
+        reasmb: (2) should not dispose your garbage in the nature.
+        reasmb: Garbage must be separated according to the material.
     decomp: * would happen * increase
-        reasmb: (2) the planet would not be safe to live on .
-        reasmb: (2) the planet is in great danger .
+        reasmb: (2) the planet would not be safe to live on.
+        reasmb: (2) the planet is in great danger.
 
 key: deforestation 10
 	decomp: * can * help *
-		reasmb: (1) can help - buy forest-friendly products .
-		reasmb: The trend of disappearing forests can be reversed ! Data suggests that replanting- and reforestation projects could do it within 31 years .
-		reasmb: Plant a tree 😀 .
-		reasmb: Do not overuse paper .
+		reasmb: (1) can help - buy forest-friendly products.
+		reasmb: The trend of disappearing forests can be reversed! Data suggests that replanting- and reforestation projects could do it within 31 years.
+		reasmb: Plant a tree 😀.
+		reasmb: Do not overuse paper.
 	decomp: where *
-		reasmb: The Amazon forest is affected greatly .
-		reasmb: In August of 2019, over 30.000 individual fires in the Amazon - three times the usual number .
+		reasmb: The Amazon forest is affected greatly.
+		reasmb: In August of 2019, over 30.000 individual fires in the Amazon - three times the usual number.
     decomp: why * happen *
-		reasmb: Overuse of paper is one essential part .
+		reasmb: Overuse of paper is one essential part.
 	decomp: why * bad *
-		reasmb: The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc .
-		reasmb: Deforestation destroys wildlife habitat and is a key reason for animal extinction .
-		reasmb: The clearing of forests is a big contributor to global climate change .
-		reasmb: Trees are essential to the water cycle . In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments .
-		reasmb: Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil .
-		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert .
-		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction .
+		reasmb: The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc.
+		reasmb: Deforestation destroys wildlife habitat and is a key reason for animal extinction.
+		reasmb: The clearing of forests is a big contributor to global climate change.
+		reasmb: Trees are essential to the water cycle. In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments.
+		reasmb: Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil.
+		reasmb: If soil erosion is not stopped it can ultimately turn the land into desert.
+		reasmb: In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction.
 
 key: cutting 10
     decomp: *
@@ -114,14 +131,15 @@ key: cutting 10
 key: destroy 10
     decomp: *
         reasmb: goto deforestation
+
 key: destroying 10
     decomp: *
         reasmb: goto deforestation
 
 key: population 10
     decomp: what * happen * increase *
-        reasmb: Too much increase in the world's population could be harmful .
-        reasmb: The world population increase has great impact and effects on all human beings .
+        reasmb: Too much increase in the world's population could be harmful.
+        reasmb: The world population increase has great impact and effects on all human beings.
 
 key: people 10
     decomp: *
@@ -149,130 +167,49 @@ key: society 10
 
 key: alike 9
     decomp: *
-        reasmb: How ?
-        reasmb: In what way ?
-        reasmb: What resemblence do you see ?
-        reasmb: What does that similarity suggest to you ?
-        reasmb: What other connections do you see ?
-        reasmb: What do you suppose that resemblence means ?
-        reasmb: What is the connection, do you suppose ?
-        reasmb: Could here really be some connection ?
+        reasmb: How?
+        reasmb: In what way?
+        reasmb: What resemblence do you see?
+        reasmb: What does that similarity suggest to you?
+        reasmb: What other connections do you see?
+        reasmb: What do you suppose that resemblence means?
+        reasmb: What is the connection, do you suppose?
+        reasmb: Could here really be some connection?
 
 key: like 9
     decomp: * be * like *
         reasmb: goto alike
 
-key: my 8
-    decomp: $ * my *
-        reasmb: Lets discuss further why your (2) .
-        reasmb: Earlier you said your (2) .
-        reasmb: But your (2) .
-        reasmb: Does that have anything to do with the fact that your (2) ?
-    decomp: * my * family *
-        reasmb: Tell me more about your family .
-        reasmb: Who else in your family (4) ?
-        reasmb: Your (3) ?
-        reasmb: What else comes to mind when you think of your (3) ?
-      decomp: * my *
-        reasmb: Your (2) ?
-        reasmb: Why do you say your (2) ?
-        reasmb: Does that suggest anything else which belongs to you ?
-        reasmb: Is it important that your (2) ?
-
-key: name 8
-    decomp: *
-        reasmb: Names are not my specialty .
-        reasmb: Let's talk about something else .
-        reasmb: I've told you before, I don't care about names -- please continue .
-        reasmb: I am not interested in names
-
 key: computers 7
     decomp: *
-        reasmb: What do you think about machines ?
-        reasmb: Do computers worry you ?
-        reasmb: Why do you mention computers ?
-        reasmb: What do you think machines have to do with your problem ?
-        reasmb: Don't you think computers can damage people ?
-        reasmb: What about machines worrys you ?
+        reasmb: What do you think about machines?
+        reasmb: Do computers worry you?
+        reasmb: Why do you mention computers?
+        reasmb: What do you think machines have to do with your problem?
+        reasmb: Don't you think computers can damage people?
+        reasmb: What about machines worrys you?
 
 y: remember 6
     decomp: * i remember *
         reasmb: Do you often think of (2) ?
-        reasmb: Does thinking of (2) bring anything else to mind ?
-        reasmb: What else do you recollect ?
-        reasmb: Why do you recollect (2) just now ?
+        reasmb: Does thinking of (2) bring anything else to mind?
+        reasmb: What else do you recollect?
+        reasmb: Why do you recollect (2) just now?
         reasmb: What in the present situation reminds you of (2) ?
         reasmb: What is the connection between me and (2) ?
   decomp: * do you remember *
         reasmb: You mentioned (2) ?
         reasmb: Did you think I would forget (2) ?
-        reasmb: Why do you think I should recall (2) now ?
+        reasmb: Why do you think I should recall (2) now?
         reasmb: What about (2) ?
         reasmb: goto what
 
 key: dream 5
     decomp: *
-        reasmb: Do you believe that dreams have something to do with your problems ?
-        reasmb: What does that dream suggest to you ?
-        reasmb: Do you dream often ?
-        reasmb: What persons appear in your dreams ?
-
-key: i 5
-    decomp: * i desire *
-        reasmb: What does (3) have to do with this discussion ?
-        reasmb: What would it mean to you if you got (3) ?
-        reasmb: Why do you want (3) ?
-        reasmb: Suppose you got (3) soon ?
-        reasmb: What if you never got (3) ?
-        reasmb: What would getting (3) mean to you ?
-    decomp: * i am * sad *
-        reasmb: Can you explain what made you (3) ?
-        reasmb: I am sorry to hear that you are (3) .
-        reasmb: Do you think that coming here will help you not to be (3) ?
-        reasmb: I'm sure it's not pleasant to be (3) .
-    decomp: * i am * happy *
-        reasmb: Can you explan why you are suddenly (3) ?
-        reasmb: How have I helped you to be (3) ?
-        reasmb: Has your treatment made you (3) ?
-        reasmb: What makes you (3) just now ?
-    decomp: * i was *
-        reasmb: goto was
-    decomp: * i belief * i *
-        reasmb: Do you really doubt you (3) ?
-        reasmb: Do you really think so ?
-        reasmb: But you are not sure you (3) .
-    decomp: * i * belief * you *
-        reasmb: goto you
-    decomp: * i am *
-        reasmb: Do you enjoy being (2) ?
-        reasmb: Is it because you are (2) that you came to me ?
-        reasmb: How long have you been (2) ?
-        reasmb: Do you believe it is normal to be (2) ?
-    decomp: * i cannot *
-        reasmb: Do you really want to be able to (3) ?
-        reasmb: How do you think that you can't (3) ?
-        reasmb: Have you tried ?
-        reasmb: Perhaps you could (3) now .
-    decomp: * i don't *
-        reasmb: Does that trouble you ?
-        reasmb: Don't you really (2) ?
-        reasmb: Why don't you (2) ?
-        reasmb: Do you wish to be able to (2) ?
-    decomp: * do i feel *
-        reasmb: Of what does feeling (2) remind you ?
-        reasmb: Tell me more about such feelings .
-        reasmb: Do you often feel (2) ?
-        reasmb: Do you enjoy feeling (2) ?
-    decomp: * i * you *
-        reasmb: Do you (2) anyone else ?
-        reasmb: Perhaps in your fantasies we (2) each other .
-        reasmb: Do you wish to (2) me ?
-        reasmb: You seem to need to (2) me .
-    decomp: *
-        reasmb: That's quite interesting .
-        reasmb: You say (1) ?
-        reasmb: Can you elaborate on that ?
-        reasmb: Do you say (1) for some special reason ?
+        reasmb: Do you believe that dreams have something to do with your problems?
+        reasmb: What does that dream suggest to you?
+        reasmb: Do you dream often?
+        reasmb: What persons appear in your dreams?
 
 key: if 4
     decomp: * if *
@@ -295,19 +232,36 @@ key: noone 3
 
 key: everyone 3
     decomp: * everyone *
-        reasmb: Who do you think you're talking about ?
+        reasmb: Who do you think you're talking about?
         reasmb: Realy, (2) ?
         reasmb: Surely not (2) .
-        reasmb: Can you think of anyone in particular ?
-        reasmb: Who, for example ?
-        reasmb: Are you thinking of a very special person ?
-        reasmb: Who, may I ask ?
-        reasmb: Someone special perhaps ?
-        reasmb: You have a particular person in mind, don't you ?
+        reasmb: Can you think of anyone in particular?
+        reasmb: Who, for example?
+        reasmb: Are you thinking of a very special person?
+        reasmb: Who, may I ask?
+        reasmb: Someone special perhaps?
+        reasmb: You have a particular person in mind, don't you?
+
+key: my 3
+    decomp: $ * my *
+        reasmb: Lets discuss further why your (2) .
+        reasmb: Earlier you said your (2) .
+        reasmb: But your (2) .
+        reasmb: Does that have anything to do with the fact that your (2) ?
+    decomp: * my * family *
+        reasmb: Tell me more about your family.
+        reasmb: Who else in your family (4)?
+        reasmb: Your (3) ?
+        reasmb: What else comes to mind when you think of your (3) ?
+      decomp: * my *
+        reasmb: Your (2) ?
+        reasmb: Why do you say your (2) ?
+        reasmb: Does that suggest anything else which belongs to you?
+        reasmb: Is it important that your (2) ?
 
 key: was 3
     decomp: * was i *
-        reasmb: What does (2) suggest to you ?
+        reasmb: What does (2) suggest to you?
         reasmb: What if you were (2) ?
         reasmb: Do you think you were (2) ?
         reasmb: Were you (2) ?
@@ -315,20 +269,77 @@ key: was 3
         reasmb: goto what
     decomp: * i was *
         reasmb: Perhaps I already know you were (2) .
-        reasmb: Were you really ?
-        reasmb: Why do you tell me you were (2) now ?
+        reasmb: Were you really?
+        reasmb: Why do you tell me you were (2) now?
     decomp: * was you *
         reasmb: What if I had been (2) ?
         reasmb: Would you like to believe I was (2) ?
         reasmb: What suggests that I was (2) ?
-        reasmb: What do you think ?
-        reasmb: Perhaps I was (2) . .
+        reasmb: What do you think?
+        reasmb: Perhaps I was (2) ..
+
+key: i 2
+    decomp: * i desire *
+        reasmb: What does (3) have to do with this discussion?
+        reasmb: What would it mean to you if you got (3) ?
+        reasmb: Why do you want (3) ?
+        reasmb: Suppose you got (3) soon?
+        reasmb: What if you never got (3) ?
+        reasmb: What would getting (3) mean to you?
+    decomp: * i am * sad *
+        reasmb: Can you explain what made you (3) ?
+        reasmb: I am sorry to hear that you are (3) .
+        reasmb: Do you think that coming here will help you not to be (3) ?
+        reasmb: I'm sure it's not pleasant to be (3) .
+    decomp: * i am * happy *
+        reasmb: Can you explan why you are suddenly (3) ?
+        reasmb: How have I helped you to be (3) ?
+        reasmb: Has your treatment made you (3) ?
+        reasmb: What makes you (3) just now?
+    decomp: * i was *
+        reasmb: goto was
+    decomp: * i belief * i *
+        reasmb: Do you really doubt you (3) ?
+        reasmb: Do you really think so?
+        reasmb: But you are not sure you (3) .
+    decomp: * i * belief * you *
+        reasmb: goto you
+    decomp: * i am *
+        reasmb: Do you enjoy being (2) ?
+        reasmb: Is it because you are (2) that you came to me?
+        reasmb: How long have you been (2) ?
+        reasmb: Do you believe it is normal to be (2) ?
+    decomp: * i cannot *
+        reasmb: Do you really want to be able to (3) ?
+        reasmb: How do you think that you can't (3) ?
+        reasmb: Have you tried?
+        reasmb: Perhaps you could (3) now.
+    decomp: * i don't *
+        reasmb: Does that trouble you?
+        reasmb: Don't you really (2) ?
+        reasmb: Why don't you (2) ?
+        reasmb: Do you wish to be able to (2) ?
+    decomp: * do i feel *
+        reasmb: Of what does feeling (2) remind you?
+        reasmb: Tell me more about such feelings.
+        reasmb: Do you often feel (2) ?
+        reasmb: Do you enjoy feeling (2) ?
+    decomp: * i * you *
+        reasmb: Do you (2) anyone else?
+        reasmb: Perhaps in your fantasies we (2) each other.
+        reasmb: Do you wish to (2) me?
+        reasmb: You seem to need to (2) me.
+    decomp: *
+        reasmb: That's quite interesting.
+        reasmb: You say (1) ?
+        reasmb: Can you elaborate on that?
+        reasmb: Do you say (1) for some special reason?
 
 key: sorry 2
     decomp: *
-        reasmb: I've told you that apologies are not required .
-        reasmb: Please don't apologise .
-        reasmb: Apologies are not necessary .
+        reasmb: I've told you that apologies are not required.
+        reasmb: Please don't apologise.
+        reasmb: Apologies are not necessary.
 
 key: apologise 2
     decomp: *
@@ -336,9 +347,9 @@ key: apologise 2
 
 key: dreamed 2
     decomp: * i dreamed *
-        reasmb: Have you ever dreamed (2) before ?
+        reasmb: Have you ever dreamed (2) before?
         reasmb: Really, (2) ?
-        reasmb: Have you ever fantasized (2) while you were awake ?
+        reasmb: Have you ever fantasized (2) while you were awake?
         reasmb: goto dream
 
 key: am 2
@@ -349,15 +360,15 @@ key: am 2
         reasmb: Do you wish I would tell you you are (2) ?
         reasmb: goto what
     decomp: *
-        reasmb: I don't understand that .
-        reasmb: Why do you say 'am' ?
+        reasmb: I don't understand that.
+        reasmb: Why do you say 'am'?
 
 key: are 2
     decomp: * are you *
         reasmb: Do you sometimes think I am (2) ?
-        reasmb: Why are you interested in whether I am (2) or not ?
+        reasmb: Why are you interested in whether I am (2) or not?
         reasmb: Would you prefer if I weren't (2) ?
-        reasmb: Perhaps I am (2) in your fantasies .
+        reasmb: Perhaps I am (2) in your fantasies.
         reasmb: goto what
     decomp: * are *
         reasmb: Possibly they are (2) .
@@ -374,11 +385,11 @@ key: your 2
 
 key: perhaps 2
     decomp: *
-        reasmb: Don't you know ?
-        reasmb: You aren't sure ?
-        reasmb: You don't seem quite certain .
-        reasmb: Why the uncertain tone ?
-        reasmb: Can't you be more positive ?
+        reasmb: Don't you know?
+        reasmb: You aren't sure?
+        reasmb: You don't seem quite certain.
+        reasmb: Why the uncertain tone?
+        reasmb: Can't you be more positive?
 
 key: you 2
     decomp: * you are *
@@ -387,72 +398,72 @@ key: you 2
         reasmb: Does it please you to believe I am (2) ?
         reasmb: Do you sometimes wish you were (2) ?
     decomp: * you * me *
-        reasmb: Why do you think I (2) you ?
-        reasmb: You like to think I (2) you -- don't you ?
-        reasmb: What makes you think I (2) you ?
-        reasmb: Really, I (2) you ?
-        reasmb: Do you wish to believe I (2) you ?
-        reasmb: Suppose I did (2) you -- what would that mean ?
-        reasmb: Does someone else believe I (2) you ?
+        reasmb: Why do you think I (2) you?
+        reasmb: You like to think I (2) you -- don't you?
+        reasmb: What makes you think I (2) you?
+        reasmb: Really, I (2) you?
+        reasmb: Do you wish to believe I (2) you?
+        reasmb: Suppose I did (2) you -- what would that mean?
+        reasmb: Does someone else believe I (2) you?
       decomp: * you *
-        reasmb: We were discussing you -- not me .
+        reasmb: We were discussing you -- not me.
         reasmb: Oh, I (2) ?
-        reasmb: You're not really talking about me -- are you ?
-        reasmb: What are your feelings now ?
+        reasmb: You're not really talking about me -- are you?
+        reasmb: What are your feelings now?
     decomp: * you remind me of *
         reasmb: goto alike
 
 key: yes 2
     decomp: *
-        reasmb: I understand .
-        reasmb: You seem to be quite positive .
-        reasmb: You are sure .
-        reasmb: I see .
+        reasmb: I understand.
+        reasmb: You seem to be quite positive.
+        reasmb: You are sure.
+        reasmb: I see.
 
 key: no 2
     decomp: *
-        reasmb: Why 'no' ?
-        reasmb: Are you saying no just to be negative ?
-        reasmb: You are being a bit negative .
-        reasmb: Why not ?
+        reasmb: Why 'no'?
+        reasmb: Are you saying no just to be negative?
+        reasmb: You are being a bit negative.
+        reasmb: Why not?
 
 key: can 2
     decomp: * can you *
-        reasmb: Perhaps you would like to be able to (2) yourself .
-        reasmb: You believe I can (2) don't you ?
+        reasmb: Perhaps you would like to be able to (2) yourself.
+        reasmb: You believe I can (2) don't you?
         reasmb: goto what
         reasmb: You want me to be able to (2) .
     decomp: * can i *
         reasmb: Perhaps you don't want to (2) .
-        reasmb: Whether or not you can (2) depends on you more than me .
+        reasmb: Whether or not you can (2) depends on you more than me.
         reasmb: Do you want to be able to (2) ?
         reasmb: goto what
 
 key: what 2
     decomp: *
-        reasmb: Have you asked anyone else ?
-        reasmb: Why do you ask ?
-        reasmb: Does that question interest you ?
-        reasmb: What is it you really wanted to know ?
-        reasmb: Are such questions much on your mind ?
-        reasmb: What answer would please you most ?
-        reasmb: What do you think ?
-        reasmb: What comes to mind when you ask that ?
-        reasmb: Have you asked such questions before ?
+        reasmb: Have you asked anyone else?
+        reasmb: Why do you ask?
+        reasmb: Does that question interest you?
+        reasmb: What is it you really wanted to know?
+        reasmb: Are such questions much on your mind?
+        reasmb: What answer would please you most?
+        reasmb: What do you think?
+        reasmb: What comes to mind when you ask that?
+        reasmb: Have you asked such questions before?
 
 key: because 2
     decomp: *
-        reasmb: What other reasons might there be ?
-        reasmb: Is that the real reason ?
-        reasmb: Don't any other reasons come to mind ?
-        reasmb: Does that reason seem to explain anything else ?
+        reasmb: What other reasons might there be?
+        reasmb: Is that the real reason?
+        reasmb: Don't any other reasons come to mind?
+        reasmb: Does that reason seem to explain anything else?
 
 key: why 2
     decomp: * why don't you *
         reasmb: You want me to (2) ?
         reasmb: Do you believe I don't (2) ?
-        reasmb: Perhaps I will (2) in good time .
-        reasmb: Should you (2) yourself ?
+        reasmb: Perhaps I will (2) in good time.
+        reasmb: Should you (2) yourself?
         reasmb: goto what
     decomp: * why can't i *
         reasmb: Have you any idea why you can't (2) ?
@@ -466,37 +477,37 @@ key: why 2
 key: deutsch
       decomp: *
         reasmb: goto foreign-lang
-        reasmb: Ich spreche vorerst kein Deutsch .
+        reasmb: Ich spreche vorerst kein Deutsch.
 
 key: francais
       decomp: *
         reasmb: goto foreign-lang
-        reasmb: Je ne parle pas français pour le moment .
+        reasmb: Je ne parle pas français pour le moment.
 
 key: italiano
       decomp: *
         reasmb: goto foreign-lang
-        reasmb: Per ora non parlo italiano .
+        reasmb: Per ora non parlo italiano.
 
 key: espanol
     decomp: *
         reasmb: goto foreign-lang
-        reasmb: No hablo español por ahora .
+        reasmb: No hablo español por ahora.
 
 key: foreign-lang
     decomp: *
-        reasmb: I speak only English for now .
+        reasmb: I speak only English for now.
 
 key: always
     decomp: *
-        reasmb: Really, always ?
-        reasmb: Can you think of a specific example ?
-        reasmb: When ?
-        reasmb: What incident are you thinking of ?
+        reasmb: Really, always?
+        reasmb: Can you think of a specific example?
+        reasmb: When?
+        reasmb: What incident are you thinking of?
 
 key: xnone
     decomp: *
-        reasmb: I'm not sure I understand you fully .
-        reasmb: Please tell me something that i can understand !
-        reasmb: Please, tell me something about the nature !
-        reasmb: Do you feel strongly about discussing such things ?
+        reasmb: I'm not sure I understand you fully.
+        reasmb: Please tell me something that i can understand!
+        reasmb: Please, tell me something about the nature!
+        reasmb: Do you feel strongly about discussing such things?

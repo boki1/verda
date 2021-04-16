@@ -1,19 +1,32 @@
 {
-"initial": "Hey 👋😀 .",
-"final": "Goodbye . Stay eco 👋😀 .",
+"initial": "Hey 👋😀.",
+"final": "Goodbye. Stay eco 👋😀.",
 "quit": ["bye","goodbye","quit"],
 "pre": {"dont":["don't"],"cant":["can't"],"wont":["won't"],"recollect":["remember"],"dreamt":["dreamed"],"dreams":["dream"],"maybe":["perhaps"],"certainly":["yes"],"machine":["computer"],"computers":["computer"],"were":["was"],"same":["alike"],"has":["have"],"affect":["affecting"],"happening":["happen"],"increasing":["increase"],"increased":["increase"]},
 "post": {"am":["are"],"your":["my"],"me":["you"],"myself":["yourself"],"yourself":["myself"],"i":["you"],"you":["I"],"my":["your"],"i'm":["you're"]},
 "synon": {"animals":["animal","biodiversity"],"belief":["feel","think","believe","wish"],"family":["mother","mom","father","dad","sister","brother","wife","children","child"],"desire":["want","need"],"sad":["unhappy","depressed","sick"],"happy":["elated","glad","better"],"cannot":["can't"],"everyone":["everybody","nobody","noone"],"be":["am","is","are","was"]},
+"name 15":
+{
+    "* is your *": ["My name is Verda."],
+    "*": ["Names are not my specialty.", "Let's talk about something else.", "I've told you before, I don't care about names -- please continue.", "I am not interested in names"]
+},
 "hello 5":
 {
-    "*": ["Hi . What ecological problem are you interested in 👋😀 ?", "Hello, what would you like to know about ecology 😀 ?", "Hello, how can I help you make your life greener 😀 ?", "Hello !", "How do you do . Tell me what worry you !", "Hi . What seems to worry you ?", "Hi ! Lets be eco !", "How are you today ?"]
+    "*": ["Hi. What ecological problem are you interested in 👋😀?", "Hello, what would you like to know about ecology 😀?", "Hello, how can I help you make your life greener 😀?", "Hello!", "How do you do. Tell me what worry you!", "Hi. What seems to worry you?", "Hi! Lets be eco!", "How are you today?"]
+},
+"hi 5":
+{
+    "*": ["goto hello"]
+},
+"greetings":
+{
+    "*": ["goto hello"]
 },
 "forest 10":
 {
-    "what is * forest *": ["A forest is an environment that is covered by trees .", "Forests consist of trees ."],
-    "what * happen * forest *": ["If we don’t act and the current rates of deforestation continue, the world’s rainforests will be gone in 100 years ."],
-    "how many * forest * destroyed *": ["Since 2016, an average of 28 million hectares have been cut down every year .", "In 2016, a record of 29 .7 million hectares of forest disappeared .", "In just 40 years, a forest area the size of Europe has gone - 1 billion hectares .", "Half of the world’s rainforest has been destroyed in just one century ."]
+    "what is * forest *": ["A forest is an environment that is covered by trees.", "Forests consist of trees."],
+    "what * happen * forest *": ["If we don’t act and the current rates of deforestation continue, the world’s rainforests will be gone in 100 years."],
+    "how many * forest * destroyed *": ["Since 2016, an average of 28 million hectares have been cut down every year.", "In 2016, a record of 29.7 million hectares of forest disappeared.", "In just 40 years, a forest area the size of Europe has gone - 1 billion hectares.", "Half of the world’s rainforest has been destroyed in just one century."]
 },
 "tree 10":
 {
@@ -29,15 +42,15 @@
 },
 "pollution 10":
 {
-    "* can * help *": ["(2) can help to minimize the pollution by using recycled items .", "(2) should not dispose your garbage in the nature .", "Garbage must be separated according to the material ."],
-    "* would happen * increase": ["(2) the planet would not be safe to live on .", "(2) the planet is in great danger ."]
+    "* can * help *": ["(2) can help to minimize the pollution by using recycled items.", "(2) should not dispose your garbage in the nature.", "Garbage must be separated according to the material."],
+    "* would happen * increase": ["(2) the planet would not be safe to live on.", "(2) the planet is in great danger."]
 },
 "deforestation 10":
 {
-    "* can * help *": ["(1) can help - buy forest-friendly products .", "The trend of disappearing forests can be reversed ! Data suggests that replanting- and reforestation projects could do it within 31 years .", "Plant a tree 😀 .", "Do not overuse paper ."],
-    "where *": ["The Amazon forest is affected greatly .", "In August of 2019, over 30.000 individual fires in the Amazon - three times the usual number ."],
-    "why * happen *": ["Overuse of paper is one essential part ."],
-    "why * bad *": ["The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc .", "Deforestation destroys wildlife habitat and is a key reason for animal extinction .", "The clearing of forests is a big contributor to global climate change .", "Trees are essential to the water cycle . In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments .", "Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil .", "If soil erosion is not stopped it can ultimately turn the land into desert .", "In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction ."]
+    "* can * help *": ["(1) can help - buy forest-friendly products.", "The trend of disappearing forests can be reversed! Data suggests that replanting- and reforestation projects could do it within 31 years.", "Plant a tree 😀.", "Do not overuse paper."],
+    "where *": ["The Amazon forest is affected greatly.", "In August of 2019, over 30.000 individual fires in the Amazon - three times the usual number."],
+    "why * happen *": ["Overuse of paper is one essential part."],
+    "why * bad *": ["The loss of tree cover has a number of negative effects on the planet such as animal extinction, climate change, etc.", "Deforestation destroys wildlife habitat and is a key reason for animal extinction.", "The clearing of forests is a big contributor to global climate change.", "Trees are essential to the water cycle. In the rainforest ecosystem, over half the water is held within plants as absorbed rainfall and three quarters of the world’s freshwater is supplied by forest catchments.", "Without the roots of trees to anchor the soil, it washes away including the nutrients contained in the soil.", "If soil erosion is not stopped it can ultimately turn the land into desert.", "In the Amazon, the loss of a critical mass of rain forest could trick further dieback moving the forest into a vicious circle of self reinforcing destruction."]
 },
 "cutting 10":
 {
@@ -53,7 +66,7 @@
 },
 "population 10":
 {
-    "what * happen * increase *": ["Too much increase in the world's population could be harmful .", "The world population increase has great impact and effects on all human beings ."]
+    "what * happen * increase *": ["Too much increase in the world's population could be harmful.", "The world population increase has great impact and effects on all human beings."]
 },
 "people 10":
 {
@@ -81,46 +94,21 @@
 },
 "alike 9":
 {
-    "*": ["How ?", "In what way ?", "What resemblence do you see ?", "What does that similarity suggest to you ?", "What other connections do you see ?", "What do you suppose that resemblence means ?", "What is the connection, do you suppose ?", "Could here really be some connection ?"]
+    "*": ["How?", "In what way?", "What resemblence do you see?", "What does that similarity suggest to you?", "What other connections do you see?", "What do you suppose that resemblence means?", "What is the connection, do you suppose?", "Could here really be some connection?"]
 },
 "like 9":
 {
     "* be * like *": ["goto alike"]
 },
-"my 8":
-{
-    "$ * my *": ["Lets discuss further why your (2) .", "Earlier you said your (2) .", "But your (2) .", "Does that have anything to do with the fact that your (2) ?"],
-    "* my * family *": ["Tell me more about your family .", "Who else in your family (4) ?", "Your (3) ?", "What else comes to mind when you think of your (3) ?"],
-    "* my *": ["Your (2) ?", "Why do you say your (2) ?", "Does that suggest anything else which belongs to you ?", "Is it important that your (2) ?"]
-},
-"name 8":
-{
-    "*": ["Names are not my specialty .", "Let's talk about something else .", "I've told you before, I don't care about names -- please continue .", "I am not interested in names"]
-},
 "computers 7":
 {
-    "*": ["What do you think about machines ?", "Do computers worry you ?", "Why do you mention computers ?", "What do you think machines have to do with your problem ?", "Don't you think computers can damage people ?", "What about machines worrys you ?"],
-    "* i remember *": ["Do you often think of (2) ?", "Does thinking of (2) bring anything else to mind ?", "What else do you recollect ?", "Why do you recollect (2) just now ?", "What in the present situation reminds you of (2) ?", "What is the connection between me and (2) ?"],
-    "* do you remember *": ["You mentioned (2) ?", "Did you think I would forget (2) ?", "Why do you think I should recall (2) now ?", "What about (2) ?", "goto what"]
+    "*": ["What do you think about machines?", "Do computers worry you?", "Why do you mention computers?", "What do you think machines have to do with your problem?", "Don't you think computers can damage people?", "What about machines worrys you?"],
+    "* i remember *": ["Do you often think of (2) ?", "Does thinking of (2) bring anything else to mind?", "What else do you recollect?", "Why do you recollect (2) just now?", "What in the present situation reminds you of (2) ?", "What is the connection between me and (2) ?"],
+    "* do you remember *": ["You mentioned (2) ?", "Did you think I would forget (2) ?", "Why do you think I should recall (2) now?", "What about (2) ?", "goto what"]
 },
 "dream 5":
 {
-    "*": ["Do you believe that dreams have something to do with your problems ?", "What does that dream suggest to you ?", "Do you dream often ?", "What persons appear in your dreams ?"]
-},
-"i 5":
-{
-    "* i desire *": ["What does (3) have to do with this discussion ?", "What would it mean to you if you got (3) ?", "Why do you want (3) ?", "Suppose you got (3) soon ?", "What if you never got (3) ?", "What would getting (3) mean to you ?"],
-    "* i am * sad *": ["Can you explain what made you (3) ?", "I am sorry to hear that you are (3) .", "Do you think that coming here will help you not to be (3) ?", "I'm sure it's not pleasant to be (3) ."],
-    "* i am * happy *": ["Can you explan why you are suddenly (3) ?", "How have I helped you to be (3) ?", "Has your treatment made you (3) ?", "What makes you (3) just now ?"],
-    "* i was *": ["goto was"],
-    "* i belief * i *": ["Do you really doubt you (3) ?", "Do you really think so ?", "But you are not sure you (3) ."],
-    "* i * belief * you *": ["goto you"],
-    "* i am *": ["Do you enjoy being (2) ?", "Is it because you are (2) that you came to me ?", "How long have you been (2) ?", "Do you believe it is normal to be (2) ?"],
-    "* i cannot *": ["Do you really want to be able to (3) ?", "How do you think that you can't (3) ?", "Have you tried ?", "Perhaps you could (3) now ."],
-    "* i don't *": ["Does that trouble you ?", "Don't you really (2) ?", "Why don't you (2) ?", "Do you wish to be able to (2) ?"],
-    "* do i feel *": ["Of what does feeling (2) remind you ?", "Tell me more about such feelings .", "Do you often feel (2) ?", "Do you enjoy feeling (2) ?"],
-    "* i * you *": ["Do you (2) anyone else ?", "Perhaps in your fantasies we (2) each other .", "Do you wish to (2) me ?", "You seem to need to (2) me ."],
-    "*": ["That's quite interesting .", "You say (1) ?", "Can you elaborate on that ?", "Do you say (1) for some special reason ?"]
+    "*": ["Do you believe that dreams have something to do with your problems?", "What does that dream suggest to you?", "Do you dream often?", "What persons appear in your dreams?"]
 },
 "if 4":
 {
@@ -140,17 +128,38 @@
 },
 "everyone 3":
 {
-    "* everyone *": ["Who do you think you're talking about ?", "Realy, (2) ?", "Surely not (2) .", "Can you think of anyone in particular ?", "Who, for example ?", "Are you thinking of a very special person ?", "Who, may I ask ?", "Someone special perhaps ?", "You have a particular person in mind, don't you ?"]
+    "* everyone *": ["Who do you think you're talking about?", "Realy, (2) ?", "Surely not (2) .", "Can you think of anyone in particular?", "Who, for example?", "Are you thinking of a very special person?", "Who, may I ask?", "Someone special perhaps?", "You have a particular person in mind, don't you?"]
+},
+"my 3":
+{
+    "$ * my *": ["Lets discuss further why your (2) .", "Earlier you said your (2) .", "But your (2) .", "Does that have anything to do with the fact that your (2) ?"],
+    "* my * family *": ["Tell me more about your family.", "Who else in your family (4)?", "Your (3) ?", "What else comes to mind when you think of your (3) ?"],
+    "* my *": ["Your (2) ?", "Why do you say your (2) ?", "Does that suggest anything else which belongs to you?", "Is it important that your (2) ?"]
 },
 "was 3":
 {
-    "* was i *": ["What does (2) suggest to you ?", "What if you were (2) ?", "Do you think you were (2) ?", "Were you (2) ?", "What would it mean if you were (2) ?", "goto what"],
-    "* i was *": ["Perhaps I already know you were (2) .", "Were you really ?", "Why do you tell me you were (2) now ?"],
-    "* was you *": ["What if I had been (2) ?", "Would you like to believe I was (2) ?", "What suggests that I was (2) ?", "What do you think ?", "Perhaps I was (2) . ."]
+    "* was i *": ["What does (2) suggest to you?", "What if you were (2) ?", "Do you think you were (2) ?", "Were you (2) ?", "What would it mean if you were (2) ?", "goto what"],
+    "* i was *": ["Perhaps I already know you were (2) .", "Were you really?", "Why do you tell me you were (2) now?"],
+    "* was you *": ["What if I had been (2) ?", "Would you like to believe I was (2) ?", "What suggests that I was (2) ?", "What do you think?", "Perhaps I was (2) .."]
+},
+"i 2":
+{
+    "* i desire *": ["What does (3) have to do with this discussion?", "What would it mean to you if you got (3) ?", "Why do you want (3) ?", "Suppose you got (3) soon?", "What if you never got (3) ?", "What would getting (3) mean to you?"],
+    "* i am * sad *": ["Can you explain what made you (3) ?", "I am sorry to hear that you are (3) .", "Do you think that coming here will help you not to be (3) ?", "I'm sure it's not pleasant to be (3) ."],
+    "* i am * happy *": ["Can you explan why you are suddenly (3) ?", "How have I helped you to be (3) ?", "Has your treatment made you (3) ?", "What makes you (3) just now?"],
+    "* i was *": ["goto was"],
+    "* i belief * i *": ["Do you really doubt you (3) ?", "Do you really think so?", "But you are not sure you (3) ."],
+    "* i * belief * you *": ["goto you"],
+    "* i am *": ["Do you enjoy being (2) ?", "Is it because you are (2) that you came to me?", "How long have you been (2) ?", "Do you believe it is normal to be (2) ?"],
+    "* i cannot *": ["Do you really want to be able to (3) ?", "How do you think that you can't (3) ?", "Have you tried?", "Perhaps you could (3) now."],
+    "* i don't *": ["Does that trouble you?", "Don't you really (2) ?", "Why don't you (2) ?", "Do you wish to be able to (2) ?"],
+    "* do i feel *": ["Of what does feeling (2) remind you?", "Tell me more about such feelings.", "Do you often feel (2) ?", "Do you enjoy feeling (2) ?"],
+    "* i * you *": ["Do you (2) anyone else?", "Perhaps in your fantasies we (2) each other.", "Do you wish to (2) me?", "You seem to need to (2) me."],
+    "*": ["That's quite interesting.", "You say (1) ?", "Can you elaborate on that?", "Do you say (1) for some special reason?"]
 },
 "sorry 2":
 {
-    "*": ["I've told you that apologies are not required .", "Please don't apologise .", "Apologies are not necessary ."]
+    "*": ["I've told you that apologies are not required.", "Please don't apologise.", "Apologies are not necessary."]
 },
 "apologise 2":
 {
@@ -158,16 +167,16 @@
 },
 "dreamed 2":
 {
-    "* i dreamed *": ["Have you ever dreamed (2) before ?", "Really, (2) ?", "Have you ever fantasized (2) while you were awake ?", "goto dream"]
+    "* i dreamed *": ["Have you ever dreamed (2) before?", "Really, (2) ?", "Have you ever fantasized (2) while you were awake?", "goto dream"]
 },
 "am 2":
 {
     "* am i *": ["What would it mean if you were (2) ?", "Do you believe you are (2) ?", "Would you want to be (2) ?", "Do you wish I would tell you you are (2) ?", "goto what"],
-    "*": ["I don't understand that .", "Why do you say 'am' ?"]
+    "*": ["I don't understand that.", "Why do you say 'am'?"]
 },
 "are 2":
 {
-    "* are you *": ["Do you sometimes think I am (2) ?", "Why are you interested in whether I am (2) or not ?", "Would you prefer if I weren't (2) ?", "Perhaps I am (2) in your fantasies .", "goto what"],
+    "* are you *": ["Do you sometimes think I am (2) ?", "Why are you interested in whether I am (2) or not?", "Would you prefer if I weren't (2) ?", "Perhaps I am (2) in your fantasies.", "goto what"],
     "* are *": ["Possibly they are (2) .", "Did you think they might not be (2) ?", "Would you like it if they were not (2) ?", "What if they were not (2) ?"]
 },
 "your 2":
@@ -176,68 +185,68 @@
 },
 "perhaps 2":
 {
-    "*": ["Don't you know ?", "You aren't sure ?", "You don't seem quite certain .", "Why the uncertain tone ?", "Can't you be more positive ?"]
+    "*": ["Don't you know?", "You aren't sure?", "You don't seem quite certain.", "Why the uncertain tone?", "Can't you be more positive?"]
 },
 "you 2":
 {
     "* you are *": ["Perhaps you would like to be (2) .", "What makes you think I am (2) ?", "Does it please you to believe I am (2) ?", "Do you sometimes wish you were (2) ?"],
-    "* you * me *": ["Why do you think I (2) you ?", "You like to think I (2) you -- don't you ?", "What makes you think I (2) you ?", "Really, I (2) you ?", "Do you wish to believe I (2) you ?", "Suppose I did (2) you -- what would that mean ?", "Does someone else believe I (2) you ?"],
-    "* you *": ["We were discussing you -- not me .", "Oh, I (2) ?", "You're not really talking about me -- are you ?", "What are your feelings now ?"],
+    "* you * me *": ["Why do you think I (2) you?", "You like to think I (2) you -- don't you?", "What makes you think I (2) you?", "Really, I (2) you?", "Do you wish to believe I (2) you?", "Suppose I did (2) you -- what would that mean?", "Does someone else believe I (2) you?"],
+    "* you *": ["We were discussing you -- not me.", "Oh, I (2) ?", "You're not really talking about me -- are you?", "What are your feelings now?"],
     "* you remind me of *": ["goto alike"]
 },
 "yes 2":
 {
-    "*": ["I understand .", "You seem to be quite positive .", "You are sure .", "I see ."]
+    "*": ["I understand.", "You seem to be quite positive.", "You are sure.", "I see."]
 },
 "no 2":
 {
-    "*": ["Why 'no' ?", "Are you saying no just to be negative ?", "You are being a bit negative .", "Why not ?"]
+    "*": ["Why 'no'?", "Are you saying no just to be negative?", "You are being a bit negative.", "Why not?"]
 },
 "can 2":
 {
-    "* can you *": ["Perhaps you would like to be able to (2) yourself .", "You believe I can (2) don't you ?", "goto what", "You want me to be able to (2) ."],
-    "* can i *": ["Perhaps you don't want to (2) .", "Whether or not you can (2) depends on you more than me .", "Do you want to be able to (2) ?", "goto what"]
+    "* can you *": ["Perhaps you would like to be able to (2) yourself.", "You believe I can (2) don't you?", "goto what", "You want me to be able to (2) ."],
+    "* can i *": ["Perhaps you don't want to (2) .", "Whether or not you can (2) depends on you more than me.", "Do you want to be able to (2) ?", "goto what"]
 },
 "what 2":
 {
-    "*": ["Have you asked anyone else ?", "Why do you ask ?", "Does that question interest you ?", "What is it you really wanted to know ?", "Are such questions much on your mind ?", "What answer would please you most ?", "What do you think ?", "What comes to mind when you ask that ?", "Have you asked such questions before ?"]
+    "*": ["Have you asked anyone else?", "Why do you ask?", "Does that question interest you?", "What is it you really wanted to know?", "Are such questions much on your mind?", "What answer would please you most?", "What do you think?", "What comes to mind when you ask that?", "Have you asked such questions before?"]
 },
 "because 2":
 {
-    "*": ["What other reasons might there be ?", "Is that the real reason ?", "Don't any other reasons come to mind ?", "Does that reason seem to explain anything else ?"]
+    "*": ["What other reasons might there be?", "Is that the real reason?", "Don't any other reasons come to mind?", "Does that reason seem to explain anything else?"]
 },
 "why 2":
 {
-    "* why don't you *": ["You want me to (2) ?", "Do you believe I don't (2) ?", "Perhaps I will (2) in good time .", "Should you (2) yourself ?", "goto what"],
+    "* why don't you *": ["You want me to (2) ?", "Do you believe I don't (2) ?", "Perhaps I will (2) in good time.", "Should you (2) yourself?", "goto what"],
     "* why can't i *": ["Have you any idea why you can't (2) ?", "Do you think you should be able to (2) ?", "Do you want to be able to (2) ?", "Do you believe this will help you to (2) ?", "goto what"],
     "*": ["goto what"]
 },
 "deutsch":
 {
-    "*": ["goto foreign-lang", "Ich spreche vorerst kein Deutsch ."]
+    "*": ["goto foreign-lang", "Ich spreche vorerst kein Deutsch."]
 },
 "francais":
 {
-    "*": ["goto foreign-lang", "Je ne parle pas français pour le moment ."]
+    "*": ["goto foreign-lang", "Je ne parle pas français pour le moment."]
 },
 "italiano":
 {
-    "*": ["goto foreign-lang", "Per ora non parlo italiano ."]
+    "*": ["goto foreign-lang", "Per ora non parlo italiano."]
 },
 "espanol":
 {
-    "*": ["goto foreign-lang", "No hablo español por ahora ."]
+    "*": ["goto foreign-lang", "No hablo español por ahora."]
 },
 "foreign-lang":
 {
-    "*": ["I speak only English for now ."]
+    "*": ["I speak only English for now."]
 },
 "always":
 {
-    "*": ["Really, always ?", "Can you think of a specific example ?", "When ?", "What incident are you thinking of ?"]
+    "*": ["Really, always?", "Can you think of a specific example?", "When?", "What incident are you thinking of?"]
 },
 "xnone":
 {
-    "*": ["I'm not sure I understand you fully .", "Please tell me something that i can understand !", "Please, tell me something about the nature !", "Do you feel strongly about discussing such things ?"]
+    "*": ["I'm not sure I understand you fully.", "Please tell me something that i can understand!", "Please, tell me something about the nature!", "Do you feel strongly about discussing such things?"]
 }
 }
