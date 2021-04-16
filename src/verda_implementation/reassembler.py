@@ -29,8 +29,7 @@ class Reassembler:
             if word[0] == '(' and word[-1] == ')':
                 index = int(word[1:-1])
                 if index < 1 or index > len(words):
-                    decomposed = " ".join(reassembly_rule_words)
-                    raise ReassemblyRuleNotFoundException(expression=reassembly_rule, decomposed=decomposed)
+                    raise ReassemblyRuleNotFoundException(expression=reassembly_rule, decomposed=" ".join(words))
                 insert = words[index - 1]
                 output.extend(insert)
             else:

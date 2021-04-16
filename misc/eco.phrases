@@ -33,7 +33,6 @@ post: you I
 post: my your
 post: i'm you're
 
-synon: animals animal biodiversity
 synon: belief feel think believe wish
 synon: family mother mom father dad sister brother wife children child
 synon: desire want need
@@ -50,7 +49,7 @@ key: name 15
         reasmb: Names are not my specialty.
         reasmb: Let's talk about something else.
         reasmb: I've told you before, I don't care about names -- please continue.
-        reasmb: I am not interested in names
+        reasmb: I am not interested in names.
 
 key: hello 5
 	decomp: *
@@ -177,7 +176,7 @@ key: alike 9
         reasmb: Could here really be some connection?
 
 key: like 9
-    decomp: * be * like *
+    decomp: * @be * like *
         reasmb: goto alike
 
 key: computers 7
@@ -231,7 +230,7 @@ key: noone 3
         reasmb: goto everyone
 
 key: everyone 3
-    decomp: * everyone *
+    decomp: * @everyone *
         reasmb: Who do you think you're talking about?
         reasmb: Realy, (2) ?
         reasmb: Surely not (2) .
@@ -248,7 +247,7 @@ key: my 3
         reasmb: Earlier you said your (2) .
         reasmb: But your (2) .
         reasmb: Does that have anything to do with the fact that your (2) ?
-    decomp: * my * family *
+    decomp: * my * @family *
         reasmb: Tell me more about your family.
         reasmb: Who else in your family (4)?
         reasmb: Your (3) ?
@@ -279,37 +278,37 @@ key: was 3
         reasmb: Perhaps I was (2) ..
 
 key: i 2
-    decomp: * i desire *
+    decomp: * i @desire *
         reasmb: What does (3) have to do with this discussion?
         reasmb: What would it mean to you if you got (3) ?
         reasmb: Why do you want (3) ?
         reasmb: Suppose you got (3) soon?
         reasmb: What if you never got (3) ?
         reasmb: What would getting (3) mean to you?
-    decomp: * i am * sad *
+    decomp: * i am * @sad *
         reasmb: Can you explain what made you (3) ?
         reasmb: I am sorry to hear that you are (3) .
         reasmb: Do you think that coming here will help you not to be (3) ?
         reasmb: I'm sure it's not pleasant to be (3) .
-    decomp: * i am * happy *
+    decomp: * i am * @happy *
         reasmb: Can you explan why you are suddenly (3) ?
         reasmb: How have I helped you to be (3) ?
         reasmb: Has your treatment made you (3) ?
         reasmb: What makes you (3) just now?
     decomp: * i was *
         reasmb: goto was
-    decomp: * i belief * i *
+    decomp: * i @belief * i *
         reasmb: Do you really doubt you (3) ?
         reasmb: Do you really think so?
         reasmb: But you are not sure you (3) .
-    decomp: * i * belief * you *
+    decomp: * i * @belief * you *
         reasmb: goto you
     decomp: * i am *
         reasmb: Do you enjoy being (2) ?
         reasmb: Is it because you are (2) that you came to me?
         reasmb: How long have you been (2) ?
         reasmb: Do you believe it is normal to be (2) ?
-    decomp: * i cannot *
+    decomp: * i @cannot *
         reasmb: Do you really want to be able to (3) ?
         reasmb: How do you think that you can't (3) ?
         reasmb: Have you tried?

@@ -155,12 +155,18 @@ class VerdaEngine:
         words = Reassembler.replace(words, subs)
         sentence = ' '.join(words)
 
+        response = ""
+
         try:
             response: str = self.decomposer.process_keywords(keywords, sentence)
-            return response
-        except Exception:
-            pass
-        return ""
+        except ReassemblyRuleNotFoundException as r_err:
+            logging.exception(r_err.msg)
+        except DecompositionRuleNotFoundException as d_err:
+            logging.exception(d_err.msg)
+        except KeywordProcessingFailedException as k_err:
+            logging.exception(k_err.msg)
+
+        return response
 
 
     def conversation_begin(self):

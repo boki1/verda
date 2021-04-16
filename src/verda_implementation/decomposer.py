@@ -22,7 +22,8 @@ class Decomposer:
         if words[0].lower() not in PhraseMemory.synonyms()[root]:
             return False
 
-        return self.decompose(expression_parts[1:], words[1:])
+        self.decomposition_result.append([words[0]])
+        return self.decompose(' '.join(words[1:]), expression_parts[1:])
 
     def parse_asterisk(self, sentence: str, expression_parts: list) -> bool:
         words = sentence.split(' ')
@@ -41,7 +42,6 @@ class Decomposer:
         return self.process_keyword(sentence, PhraseMemory.keyword(goto_key))
 
     def decompose(self, sentence: str, expression_parts: list) -> bool:
-
         if not sentence and not expression_parts:
             logging.info(f"'{sentence}' == None and '{expression_parts}' == None")
             return True

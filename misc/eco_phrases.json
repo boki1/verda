@@ -4,11 +4,11 @@
 "quit": ["bye","goodbye","quit"],
 "pre": {"dont":["don't"],"cant":["can't"],"wont":["won't"],"recollect":["remember"],"dreamt":["dreamed"],"dreams":["dream"],"maybe":["perhaps"],"certainly":["yes"],"machine":["computer"],"computers":["computer"],"were":["was"],"same":["alike"],"has":["have"],"affect":["affecting"],"happening":["happen"],"increasing":["increase"],"increased":["increase"]},
 "post": {"am":["are"],"your":["my"],"me":["you"],"myself":["yourself"],"yourself":["myself"],"i":["you"],"you":["I"],"my":["your"],"i'm":["you're"]},
-"synon": {"animals":["animal","biodiversity"],"belief":["feel","think","believe","wish"],"family":["mother","mom","father","dad","sister","brother","wife","children","child"],"desire":["want","need"],"sad":["unhappy","depressed","sick"],"happy":["elated","glad","better"],"cannot":["can't"],"everyone":["everybody","nobody","noone"],"be":["am","is","are","was"]},
+"synon": {"belief":["feel","think","believe","wish"],"family":["mother","mom","father","dad","sister","brother","wife","children","child"],"desire":["want","need"],"sad":["unhappy","depressed","sick"],"happy":["elated","glad","better"],"cannot":["can't"],"everyone":["everybody","nobody","noone"],"be":["am","is","are","was"]},
 "name 15":
 {
     "* is your *": ["My name is Verda."],
-    "*": ["Names are not my specialty.", "Let's talk about something else.", "I've told you before, I don't care about names -- please continue.", "I am not interested in names"]
+    "*": ["Names are not my specialty.", "Let's talk about something else.", "I've told you before, I don't care about names -- please continue.", "I am not interested in names."]
 },
 "hello 5":
 {
@@ -98,7 +98,7 @@
 },
 "like 9":
 {
-    "* be * like *": ["goto alike"]
+    "* @be * like *": ["goto alike"]
 },
 "computers 7":
 {
@@ -128,12 +128,12 @@
 },
 "everyone 3":
 {
-    "* everyone *": ["Who do you think you're talking about?", "Realy, (2) ?", "Surely not (2) .", "Can you think of anyone in particular?", "Who, for example?", "Are you thinking of a very special person?", "Who, may I ask?", "Someone special perhaps?", "You have a particular person in mind, don't you?"]
+    "* @everyone *": ["Who do you think you're talking about?", "Realy, (2) ?", "Surely not (2) .", "Can you think of anyone in particular?", "Who, for example?", "Are you thinking of a very special person?", "Who, may I ask?", "Someone special perhaps?", "You have a particular person in mind, don't you?"]
 },
 "my 3":
 {
     "$ * my *": ["Lets discuss further why your (2) .", "Earlier you said your (2) .", "But your (2) .", "Does that have anything to do with the fact that your (2) ?"],
-    "* my * family *": ["Tell me more about your family.", "Who else in your family (4)?", "Your (3) ?", "What else comes to mind when you think of your (3) ?"],
+    "* my * @family *": ["Tell me more about your family.", "Who else in your family (4)?", "Your (3) ?", "What else comes to mind when you think of your (3) ?"],
     "* my *": ["Your (2) ?", "Why do you say your (2) ?", "Does that suggest anything else which belongs to you?", "Is it important that your (2) ?"]
 },
 "was 3":
@@ -144,14 +144,14 @@
 },
 "i 2":
 {
-    "* i desire *": ["What does (3) have to do with this discussion?", "What would it mean to you if you got (3) ?", "Why do you want (3) ?", "Suppose you got (3) soon?", "What if you never got (3) ?", "What would getting (3) mean to you?"],
-    "* i am * sad *": ["Can you explain what made you (3) ?", "I am sorry to hear that you are (3) .", "Do you think that coming here will help you not to be (3) ?", "I'm sure it's not pleasant to be (3) ."],
-    "* i am * happy *": ["Can you explan why you are suddenly (3) ?", "How have I helped you to be (3) ?", "Has your treatment made you (3) ?", "What makes you (3) just now?"],
+    "* i @desire *": ["What does (3) have to do with this discussion?", "What would it mean to you if you got (3) ?", "Why do you want (3) ?", "Suppose you got (3) soon?", "What if you never got (3) ?", "What would getting (3) mean to you?"],
+    "* i am * @sad *": ["Can you explain what made you (3) ?", "I am sorry to hear that you are (3) .", "Do you think that coming here will help you not to be (3) ?", "I'm sure it's not pleasant to be (3) ."],
+    "* i am * @happy *": ["Can you explan why you are suddenly (3) ?", "How have I helped you to be (3) ?", "Has your treatment made you (3) ?", "What makes you (3) just now?"],
     "* i was *": ["goto was"],
-    "* i belief * i *": ["Do you really doubt you (3) ?", "Do you really think so?", "But you are not sure you (3) ."],
-    "* i * belief * you *": ["goto you"],
+    "* i @belief * i *": ["Do you really doubt you (3) ?", "Do you really think so?", "But you are not sure you (3) ."],
+    "* i * @belief * you *": ["goto you"],
     "* i am *": ["Do you enjoy being (2) ?", "Is it because you are (2) that you came to me?", "How long have you been (2) ?", "Do you believe it is normal to be (2) ?"],
-    "* i cannot *": ["Do you really want to be able to (3) ?", "How do you think that you can't (3) ?", "Have you tried?", "Perhaps you could (3) now."],
+    "* i @cannot *": ["Do you really want to be able to (3) ?", "How do you think that you can't (3) ?", "Have you tried?", "Perhaps you could (3) now."],
     "* i don't *": ["Does that trouble you?", "Don't you really (2) ?", "Why don't you (2) ?", "Do you wish to be able to (2) ?"],
     "* do i feel *": ["Of what does feeling (2) remind you?", "Tell me more about such feelings.", "Do you often feel (2) ?", "Do you enjoy feeling (2) ?"],
     "* i * you *": ["Do you (2) anyone else?", "Perhaps in your fantasies we (2) each other.", "Do you wish to (2) me?", "You seem to need to (2) me."],
