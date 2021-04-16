@@ -41,7 +41,7 @@ class PhraseMemory:
     @classmethod
     def synonyms(cls):
         if cls.phrases:
-            return cls.phrases.synonyms
+            return {tup[0]: tup[0:] for tup in cls.phrases.synonyms if len(tup) >= 2}
 
     @classmethod
     def keywords(cls):
