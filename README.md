@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/36764968/110909706-12eee800-8319-11eb-9ece-c281c4b45409.png)
 
-Verda is a chatbot that helps you **understand** and **react** appropiately to the the problems which surround us.
+Verda is a chatbot that helps you **understand** and **react** appropriately to the problems which surround us.
 
 ### How can Verda help us?
 
